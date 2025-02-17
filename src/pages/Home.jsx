@@ -18,7 +18,7 @@ function Home() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-[calc(100vh-5rem)] p-8"
+      className="min-h-[calc(100vh-5rem)] p-4 md:p-8"
     >
       {/* Hero Section */}
       <motion.div 

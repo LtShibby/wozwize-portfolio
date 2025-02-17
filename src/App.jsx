@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from './context/ThemeContext';
@@ -19,7 +19,7 @@ function AppContent() {
   const location = useLocation();
   
   return (
-    <div className={`min-h-screen w-full ${theme.background}`}>
+    <div className={`min-h-screen w-full ${theme.background} overflow-x-hidden`}>
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -30,6 +30,7 @@ function AppContent() {
           <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
           <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
           <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
       <ThemeSwitcher />

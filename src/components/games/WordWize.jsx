@@ -66,7 +66,7 @@ function WordWize() {
   };
 
   return (
-    <div className="flex min-h-[calc(100vh-5rem)] p-4 md:p-8 gap-8">
+    <div className="flex min-h-[calc(100vh-5rem)] p-4 md:p-8 pt-20">
       {/* Game Instructions Sidebar */}
       <div className={`hidden md:block w-72 ${theme.nav} p-6 rounded-lg shadow-lg h-fit`}>
         <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>How To Play</h3>

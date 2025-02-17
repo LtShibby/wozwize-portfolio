@@ -65,6 +65,7 @@ const PageTransition = ({ children, variant = "fade" }) => {
         duration: 0.3,
         ease: "easeInOut"
       }}
+      className="pt-20"
     >
       {children}
     </motion.div>
