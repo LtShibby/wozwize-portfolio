@@ -13,6 +13,7 @@ function WizeSnake() {
     WizeSnake: '#00ff00',
     food: '#ff0000'
   });
+  const [isMobile, setIsMobile] = useState(false);
 
   // Game constants
   const GRID_SIZE = 20;
@@ -63,6 +64,18 @@ function WizeSnake() {
       (current.y === -1 && next.y === 1)
     );
   };
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -242,6 +255,60 @@ function WizeSnake() {
     setGameStarted(false);
   };
 
+  // Touch Controls Component
+  const TouchControls = () => (
+    <div className="grid grid-cols-3 gap-2 w-48 mx-auto mt-4">
+      {/* Up button */}
+      <div className="col-start-2">
+        <button
+          onClick={() => handleDirectionChange({ x: 0, y: -1 })}
+          className={`${theme.button} w-12 h-12 rounded-full flex items-center justify-center`}
+        >
+          ↑
+        </button>
+      </div>
+      
+      {/* Left, Down, Right buttons */}
+      <div className="col-span-3 flex justify-between">
+        <button
+          onClick={() => handleDirectionChange({ x: -1, y: 0 })}
+          className={`${theme.button} w-12 h-12 rounded-full flex items-center justify-center`}
+        >
+          ←
+        </button>
+        <button
+          onClick={() => handleDirectionChange({ x: 0, y: 1 })}
+          className={`${theme.button} w-12 h-12 rounded-full flex items-center justify-center`}
+        >
+          ↓
+        </button>
+        <button
+          onClick={() => handleDirectionChange({ x: 1, y: 0 })}
+          className={`${theme.button} w-12 h-12 rounded-full flex items-center justify-center`}
+        >
+          →
+        </button>
+      </div>
+    </div>
+  );
+
+  // Handle direction changes
+  const handleDirectionChange = (newDirection) => {
+    if (isAIMode) return;
+    
+    // Prevent moving in opposite direction
+    if (isOppositeDirection(direction, newDirection)) {
+      return;
+    }
+
+    // Start game on first movement
+    if (!gameStarted && (newDirection.x !== 0 || newDirection.y !== 0)) {
+      setGameStarted(true);
+    }
+
+    setDirection(newDirection);
+  };
+
   return (
     <div className="flex min-h-[calc(100vh-5rem)] p-4 md:p-8 gap-8">
       {/* Game Instructions */}
@@ -284,6 +351,12 @@ function WizeSnake() {
             ))}
           </div>
         </div>
+
+        {isMobile && (
+          <div className={`${theme.text} space-y-3 text-sm`}>
+            <li>• Use on-screen controls on mobile</li>
+          </div>
+        )}
       </div>
 
       {/* Game Area */}
@@ -295,9 +368,16 @@ function WizeSnake() {
           height={CANVAS_HEIGHT}
           className="border border-current rounded"
         />
+        
+        {/* Mobile Controls */}
+        {isMobile && !gameOver && <TouchControls />}
+        
+        {/* Game Messages */}
         {!gameStarted && !gameOver && (
           <div className="text-center mt-4">
-            <p className={`${theme.text} mb-4`}>Press any arrow key to start!</p>
+            <p className={`${theme.text} mb-4`}>
+              {isMobile ? "Use controls below to start!" : "Press any arrow key to start!"}
+            </p>
           </div>
         )}
         {gameOver && (

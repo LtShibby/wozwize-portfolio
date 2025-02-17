@@ -27,7 +27,7 @@ const themes = {
 };
 
 export function ThemeProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState('light');
+  const [currentTheme, setCurrentTheme] = useState('dark');
 
   return (
     <ThemeContext.Provider value={{ theme: themes[currentTheme], setTheme: setCurrentTheme }}>
