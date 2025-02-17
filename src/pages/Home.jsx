@@ -78,11 +78,12 @@ function Home() {
         className={`${theme.nav} p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12`}
       >
         <p className={`${theme.text} text-lg leading-relaxed mb-6`}>
-        Dedicated Software Engineer and AI Developer focused on transforming complex challenges into efficient, scalable solutions. 
-        Leveraging expertise in LLM implementations, full-stack development (Java, Python, React), and cloud architecture (AWS, GCP) 
-        to build next-generation applications. Passionate about leading agile teams and implementing AI-driven systems that deliver 
-        measurable business value. Currently exploring innovations in machine learning, prompt engineering, and enterprise software 
-        architecture.
+          Senior Software Engineer and AI Solutions Architect specializing in enterprise-scale applications 
+          and artificial intelligence integration. Expert in developing LLM-powered applications, cloud-native 
+          architectures, and full-stack solutions using Java, Python, and React. Leading development teams 
+          in implementing cutting-edge AI technologies, from GPT integrations to custom machine learning models. 
+          Proven track record of delivering scalable solutions for Fortune 500 companies while mentoring 
+          the next generation of tech leaders.
         </p>
       </motion.div>
 
@@ -94,11 +95,12 @@ function Home() {
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
-            🔧 Technical Excellence
+            🔧 Full-Stack Development
           </h3>
           <p className={`${theme.text} opacity-80`}>
-            Designed and deployed high-performance software solutions that improved system efficiency, 
-            reduced processing times, and elevated user satisfaction.
+            Architecting and deploying high-performance, cloud-native applications using 
+            modern tech stacks. Expertise in microservices, RESTful APIs, and distributed 
+            systems that scale efficiently in AWS and GCP environments.
           </p>
         </motion.div>
 
@@ -108,11 +110,12 @@ function Home() {
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
-            👨‍🏫 Developer Mentoring
+            🤖 AI/ML Engineering
           </h3>
           <p className={`${theme.text} opacity-80`}>
-            My passion for sharing knowledge drives my commitment to mentoring developers, 
-            training teams, and hosting technical workshops through WozWize, a platform for tech mentoring and insights.
+            Implementing advanced AI solutions including LLM integrations, RAG systems, 
+            and custom machine learning models. Specialized in prompt engineering, vector 
+            databases, and AI-powered automation for enterprise applications.
           </p>
         </motion.div>
 
@@ -122,11 +125,63 @@ function Home() {
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
-            🤝 Collaborative Innovation
+            👨‍🏫 Technical Leadership
           </h3>
           <p className={`${theme.text} opacity-80`}>
-            I foster inclusive, collaborative environments where innovation thrives. 
-            By connecting diverse perspectives, I enable teams to solve complex challenges.
+            Leading agile development teams and mentoring software engineers through WozWize. 
+            Expertise in system architecture, code quality, and implementing best practices 
+            for scalable, maintainable software solutions.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Additional Expertise Areas */}
+      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <motion.div 
+          {...fadeIn} 
+          transition={{ delay: 0.3 }}
+          className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+        >
+          <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
+            ✍️ Technical Writing
+          </h3>
+          <p className={`${theme.text} opacity-80`}>
+            Author of "Delving into Design Patterns" and the WozWize Newsletter. 
+            Creating comprehensive guides on AI development, software architecture, 
+            and emerging technologies. Sharing insights that help developers stay 
+            ahead in the rapidly evolving tech landscape.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          {...fadeIn} 
+          transition={{ delay: 0.4 }}
+          className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+        >
+          <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
+            🎓 Tech Mentorship
+          </h3>
+          <p className={`${theme.text} opacity-80`}>
+            Dedicated to nurturing the next generation of tech leaders through 
+            one-on-one mentoring, code reviews, and career guidance. Helping 
+            developers master modern technologies and best practices while 
+            building their professional portfolio.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          {...fadeIn} 
+          transition={{ delay: 0.5 }}
+          className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+        >
+          <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
+            💼 Technical Consulting
+          </h3>
+          <p className={`${theme.text} opacity-80`}>
+            Providing strategic technical guidance to organizations navigating digital 
+            transformation. Advising on AI integration, system modernization, and 
+            technology stack optimization to achieve business objectives and maintain 
+            competitive advantage.
           </p>
         </motion.div>
       </div>
@@ -138,14 +193,15 @@ function Home() {
         className="text-center max-w-2xl mx-auto"
       >
         <p className={`${theme.text} text-lg mb-6`}>
-          Let's connect to discuss how we can build scalable solutions, implement AI innovations, 
-          and develop top talent to drive impactful software development together!
+          Ready to elevate your software development with AI integration, cloud architecture, 
+          or technical mentorship? Let's collaborate on building innovative, scalable solutions 
+          that drive real business value.
         </p>
         <Link 
           to="/contact"
           className={`${theme.button} px-8 py-3 rounded inline-block hover:opacity-90 transition-all`}
         >
-          Start a Conversation
+          Schedule a Consultation
         </Link>
       </motion.div>
     </motion.div>
