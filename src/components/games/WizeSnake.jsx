@@ -361,7 +361,7 @@ function WizeSnake() {
 
       {/* Game Area */}
       <div className={`${theme.nav} p-8 rounded-lg shadow-lg max-w-3xl mx-auto`}>
-        <h2 className={`${theme.text} text-3xl font-bold mb-6 text-center font-['Fira_Code']`}>WIZEWizeSnake</h2>
+        <h2 className={`${theme.text} text-3xl font-bold mb-6 text-center font-['Fira_Code']`}>WIZEsnake</h2>
         <canvas
           ref={canvasRef}
           width={CANVAS_WIDTH}
