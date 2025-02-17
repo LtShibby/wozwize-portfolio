@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import WordWize from './components/games/WordWize';
 import WizeSnake from './components/games/WizeSnake';
 import PageTransition from './components/PageTransition';
+import Newsletter from './pages/Newsletter';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -25,6 +26,7 @@ function AppContent() {
           <Route path="/projects" element={<PageTransition variant="slide"><Projects /></PageTransition>} />
           <Route path="/about" element={<PageTransition variant="fade"><About /></PageTransition>} />
           <Route path="/contact" element={<PageTransition variant="scale"><Contact /></PageTransition>} />
+          <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
           <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
           <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
         </Routes>
