@@ -13,6 +13,7 @@ import WizeSnake from './components/games/WizeSnake';
 import PageTransition from './components/PageTransition';
 import Newsletter from './pages/Newsletter';
 import ThemeIcon from './components/ThemeIcon';
+import LearningAssistant from './pages/LearningAssistant';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -30,6 +31,7 @@ function AppContent() {
           <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
           <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
           <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
+          <Route path="/learning-assistant" element={<PageTransition variant="slide"><LearningAssistant /></PageTransition>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>

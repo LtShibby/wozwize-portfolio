@@ -55,7 +55,44 @@ function Projects() {
           external: true
         }
       ]
-    }
+    },
+    // learningTools: {
+    //   title: "Learning Tools",
+    //   items: [
+    //     // Comment out Learning Assistant for now
+    //     /*
+    //     {
+    //       title: "Coding Problem Assistant",
+    //       description: "An AI-powered learning tool that helps analyze coding problems, " +
+    //                   "provides guided hints, and offers code review feedback. Features include " +
+    //                   "pattern recognition, pseudocode generation, and test case analysis.",
+    //       path: "/learning-assistant",
+    //       tech: ["Python", "OpenAI API", "AST Analysis", "Algorithm Patterns"],
+    //       features: [
+    //         "Problem analysis and breakdown",
+    //         "Pattern recognition",
+    //         "Guided hint system",
+    //         "Code review and feedback",
+    //         "Test case analysis"
+    //       ]
+    //     },
+    //     */
+    //   ]
+    // },
+    // tools: {
+    //   title: "Tools",
+    //   items: [
+    //     // Comment out Learning Assistant for now
+    //     /*
+    //     {
+    //       title: "Learning Assistant",
+    //       description: "AI-powered coding problem analyzer and solution generator. Uses Ollama with the Mistral model for local AI processing.",
+    //       path: "/learning-assistant",
+    //       tech: ["React", "Node.js", "Ollama", "Mistral"]
+    //     },
+    //     */
+    //   ]
+    // }
   };
 
   const ProjectCard = ({ project }) => (
@@ -66,6 +103,18 @@ function Projects() {
     >
       <h3 className={`${theme.text} text-2xl font-bold mb-3`}>{project.title}</h3>
       <p className={`${theme.text} opacity-80 mb-4`}>{project.description}</p>
+      
+      {project.features && (
+        <ul className="mb-4 space-y-2">
+          {project.features.map((feature, index) => (
+            <li key={index} className={`${theme.text} opacity-75 flex items-start gap-2`}>
+              <span className="mt-1">•</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       <div className="flex flex-wrap gap-2 mb-4">
         {project.tech.map((tech, techIndex) => (
           <span
@@ -76,6 +125,7 @@ function Projects() {
           </span>
         ))}
       </div>
+
       {project.external ? (
         <a 
           href={project.path}
@@ -83,7 +133,7 @@ function Projects() {
           rel="noopener noreferrer"
           className={`${theme.button} px-6 py-2 rounded inline-block hover:opacity-90 transition-all`}
         >
-          Try GPT
+          View Project
         </a>
       ) : (
         <Link 
