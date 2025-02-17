@@ -34,14 +34,6 @@ function Navbar() {
             <li><Link to="/projects" className={`block py-2 md:py-0 ${theme.text} hover:opacity-80 transition-colors before:content-['<'] after:content-['>']`}>Projects</Link></li>
             <li><Link to="/about" className={`block py-2 md:py-0 ${theme.text} hover:opacity-80 transition-colors before:content-['<'] after:content-['>']`}>About</Link></li>
             <li><Link to="/contact" className={`block py-2 md:py-0 ${theme.text} hover:opacity-80 transition-colors before:content-['<'] after:content-['>']`}>Contact</Link></li>
-            <li>
-              <Link 
-                to="/projects" 
-                className={`block py-2 md:py-0 ${theme.text} hover:opacity-80 transition-colors before:content-['<'] after:content-['>']`}
-              >
-                Projects
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
