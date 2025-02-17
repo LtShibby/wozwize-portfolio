@@ -78,9 +78,11 @@ function Home() {
         className={`${theme.nav} p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12`}
       >
         <p className={`${theme.text} text-lg leading-relaxed mb-6`}>
-          I am driven by the challenge of solving real-world problems through scalable, innovative software. 
-          With expertise in Java, Python, AI Implementations, Software Architecture, and Agile Methodologies, 
-          I've developed mission-critical systems, optimized processes, and empowered teams to deliver high-impact projects.
+        Dedicated Software Engineer and AI Developer focused on transforming complex challenges into efficient, scalable solutions. 
+        Leveraging expertise in LLM implementations, full-stack development (Java, Python, React), and cloud architecture (AWS, GCP) 
+        to build next-generation applications. Passionate about leading agile teams and implementing AI-driven systems that deliver 
+        measurable business value. Currently exploring innovations in machine learning, prompt engineering, and enterprise software 
+        architecture.
         </p>
       </motion.div>
 
