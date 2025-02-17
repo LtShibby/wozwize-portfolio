@@ -7,8 +7,8 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Wordle from './components/games/Wordle';
-import Snake from './components/games/Snake';
+import WordWize from './components/games/WordWize';
+import WizeSnake from './components/games/WizeSnake';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -21,8 +21,8 @@ function AppContent() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/games/wordle" element={<Wordle />} />
-        <Route path="/games/snake" element={<Snake />} />
+        <Route path="/games/wordwize" element={<WordWize />} />
+        <Route path="/games/wizesnake" element={<WizeSnake />} />
       </Routes>
       <ThemeSwitcher />
     </div>

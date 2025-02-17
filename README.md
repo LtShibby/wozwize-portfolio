@@ -47,8 +47,8 @@ wozwize-portfolio/
 ├── src/
 │   ├── components/
 │   │   ├── games/
-│   │   │   ├── Snake.jsx
-│   │   │   └── Wordle.jsx
+│   │   │   ├── WizeSnake.jsx
+│   │   │   └── WordWize.jsx
 │   │   ├── Navbar.jsx
 │   │   └── ThemeSwitcher.jsx
 │   ├── context/

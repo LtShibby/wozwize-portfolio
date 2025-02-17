@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 
-function Snake() {
+function WizeSnake() {
   const { theme } = useTheme();
   const canvasRef = useRef(null);
   const [score, setScore] = useState(0);
@@ -10,7 +10,7 @@ function Snake() {
   const [gameStarted, setGameStarted] = useState(false);
   const [gameTheme, setGameTheme] = useState({
     background: '#000000',
-    snake: '#00ff00',
+    WizeSnake: '#00ff00',
     food: '#ff0000'
   });
 
@@ -21,7 +21,7 @@ function Snake() {
   const CANVAS_HEIGHT = 400;
 
   // Game state
-  const [snake, setSnake] = useState([
+  const [WizeSnake, setWizeSnake] = useState([
     { x: 10, y: 10 }
   ]);
   const [food, setFood] = useState({ x: 15, y: 15 });
@@ -31,25 +31,25 @@ function Snake() {
     classic: {
       name: 'Classic',
       background: '#000000',
-      snake: '#00ff00',
+      WizeSnake: '#00ff00',
       food: '#ff0000'
     },
     retro: {
       name: 'Retro',
       background: '#2c3e50',
-      snake: '#e74c3c',
+      WizeSnake: '#e74c3c',
       food: '#f1c40f'
     },
     neon: {
       name: 'Neon',
       background: '#1a1a1a',
-      snake: '#00ffff',
+      WizeSnake: '#00ffff',
       food: '#ff00ff'
     },
     forest: {
       name: 'Forest',
       background: '#2d3436',
-      snake: '#6ab04c',
+      WizeSnake: '#6ab04c',
       food: '#eb4d4b'
     }
   };
@@ -74,9 +74,9 @@ function Snake() {
       ctx.fillStyle = gameTheme.background;
       ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-      // Draw snake with theme color
-      snake.forEach(segment => {
-        ctx.fillStyle = gameTheme.snake;
+      // Draw WizeSnake with theme color
+      WizeSnake.forEach(segment => {
+        ctx.fillStyle = gameTheme.WizeSnake;
         ctx.fillRect(
           segment.x * GRID_SIZE,
           segment.y * GRID_SIZE,
@@ -95,11 +95,11 @@ function Snake() {
       );
     };
 
-    const moveSnake = () => {
+    const moveWizeSnake = () => {
       if (gameOver || !gameStarted) return;
 
-      const newSnake = [...snake];
-      const head = { ...newSnake[0] };
+      const newWizeSnake = [...WizeSnake];
+      const head = { ...newWizeSnake[0] };
 
       // AI Mode logic
       if (isAIMode) {
@@ -130,7 +130,7 @@ function Snake() {
         const nextX = (head.x + newDirection.x + CANVAS_WIDTH / GRID_SIZE) % (CANVAS_WIDTH / GRID_SIZE);
         const nextY = (head.y + newDirection.y + CANVAS_HEIGHT / GRID_SIZE) % (CANVAS_HEIGHT / GRID_SIZE);
         
-        const wouldCollide = newSnake.some(segment => 
+        const wouldCollide = newWizeSnake.some(segment => 
           segment.x === nextX && segment.y === nextY
         );
 
@@ -148,12 +148,12 @@ function Snake() {
       head.y = (head.y + CANVAS_HEIGHT / GRID_SIZE) % (CANVAS_HEIGHT / GRID_SIZE);
 
       // Check collision with self (only if game has started)
-      if (gameStarted && newSnake.length > 1 && newSnake.some(segment => segment.x === head.x && segment.y === head.y)) {
+      if (gameStarted && newWizeSnake.length > 1 && newWizeSnake.some(segment => segment.x === head.x && segment.y === head.y)) {
         setGameOver(true);
         return;
       }
 
-      newSnake.unshift(head);
+      newWizeSnake.unshift(head);
 
       // Check if food is eaten
       if (head.x === food.x && head.y === food.y) {
@@ -164,14 +164,14 @@ function Snake() {
         };
         setFood(newFood);
       } else {
-        newSnake.pop();
+        newWizeSnake.pop();
       }
 
-      setSnake(newSnake);
+      setWizeSnake(newWizeSnake);
     };
 
     // Game loop
-    gameInterval = setInterval(moveSnake, GAME_SPEED);
+    gameInterval = setInterval(moveWizeSnake, GAME_SPEED);
     
     // Draw loop
     const animationFrame = requestAnimationFrame(function animate() {
@@ -231,10 +231,10 @@ function Snake() {
       cancelAnimationFrame(animationFrame);
       window.removeEventListener('keydown', handleKeyPress);
     };
-  }, [snake, food, direction, gameOver, isAIMode, gameTheme, gameStarted]);
+  }, [WizeSnake, food, direction, gameOver, isAIMode, gameTheme, gameStarted]);
 
   const resetGame = () => {
-    setSnake([{ x: 10, y: 10 }]);
+    setWizeSnake([{ x: 10, y: 10 }]);
     setFood({ x: 15, y: 15 });
     setDirection({ x: 0, y: 0 });
     setScore(0);
@@ -249,7 +249,7 @@ function Snake() {
         <div>
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>How To Play</h3>
           <ul className={`${theme.text} space-y-3 text-sm`}>
-            <li>• Use arrow keys to control the snake</li>
+            <li>• Use arrow keys to control the WizeSnake</li>
             <li>• Collect food to grow</li>
             <li>• Press 'I' to toggle AI mode</li>
             <li>• Avoid hitting yourself</li>
@@ -275,11 +275,11 @@ function Snake() {
                   ${gameTheme.name === theme.name ? 'ring-2 ring-offset-2' : 'hover:opacity-80'}`}
                 style={{ 
                   background: theme.background,
-                  border: `1px solid ${theme.snake}`
+                  border: `1px solid ${theme.WizeSnake}`
                 }}
               >
-                <span className="w-4 h-4 rounded-full" style={{ background: theme.snake }}></span>
-                <span style={{ color: theme.snake }}>{theme.name}</span>
+                <span className="w-4 h-4 rounded-full" style={{ background: theme.WizeSnake }}></span>
+                <span style={{ color: theme.WizeSnake }}>{theme.name}</span>
               </button>
             ))}
           </div>
@@ -288,7 +288,7 @@ function Snake() {
 
       {/* Game Area */}
       <div className={`${theme.nav} p-8 rounded-lg shadow-lg max-w-3xl mx-auto`}>
-        <h2 className={`${theme.text} text-3xl font-bold mb-6 text-center font-['Fira_Code']`}>WIZEsnake</h2>
+        <h2 className={`${theme.text} text-3xl font-bold mb-6 text-center font-['Fira_Code']`}>WIZEWizeSnake</h2>
         <canvas
           ref={canvasRef}
           width={CANVAS_WIDTH}
@@ -316,4 +316,4 @@ function Snake() {
   );
 }
 
-export default Snake; 
+export default WizeSnake; 

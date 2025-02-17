@@ -9,13 +9,13 @@ function Projects() {
     {
       title: "WordWIZE",
       description: "A Wordle-inspired word guessing game built with React. Features include daily challenges, custom word length options, and a clean, responsive interface.",
-      path: "/games/wordle",
+      path: "/games/wordwize",
       tech: ["React", "JavaScript", "Tailwind CSS"]
     },
     {
       title: "WIZEsnake",
       description: "Classic snake game reimagined with modern features including AI mode, multiple themes, and responsive controls. Built using React and HTML Canvas.",
-      path: "/games/snake",
+      path: "/games/wizesnake",
       tech: ["React", "Canvas API", "AI Algorithm"]
     }
   ];

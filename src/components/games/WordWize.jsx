@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 
-function Wordle() {
+function WordWize() {
   const { theme } = useTheme();
   const [word, setWord] = useState('');
   const [guesses, setGuesses] = useState([]);
@@ -165,4 +165,4 @@ function Wordle() {
   );
 }
 
-export default Wordle; 
+export default WordWize; 

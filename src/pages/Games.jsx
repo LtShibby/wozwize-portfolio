@@ -9,12 +9,12 @@ function Games() {
     {
       title: "WordWIZE",
       description: "A Wordle-inspired word guessing game",
-      path: "/games/wordle"
+      path: "/games/wordwize"
     },
     {
       title: "WIZEsnake",
       description: "Classic snake game with AI mode",
-      path: "/games/snake"
+      path: "/games/wizesnake"
     }
   ];
 
