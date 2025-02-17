@@ -73,8 +73,8 @@ function Home() {
 
       {/* Mission Statement */}
       <motion.div 
-        {...fadeIn} 
-        transition={{ delay: 0.2 }}
+        {...fadeIn}
+        delay={0.2}
         className={`${theme.nav} p-8 rounded-lg shadow-lg max-w-4xl mx-auto mb-12`}
       >
         <p className={`${theme.text} text-lg leading-relaxed mb-6`}>
@@ -90,8 +90,8 @@ function Home() {
       {/* Key Areas */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.3 }}
+          {...fadeIn}
+          delay={0.3}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -105,8 +105,8 @@ function Home() {
         </motion.div>
 
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.4 }}
+          {...fadeIn}
+          delay={0.4}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -120,8 +120,8 @@ function Home() {
         </motion.div>
 
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.5 }}
+          {...fadeIn}
+          delay={0.5}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -138,8 +138,8 @@ function Home() {
       {/* Additional Expertise Areas */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.3 }}
+          {...fadeIn}
+          delay={0.6}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -154,8 +154,8 @@ function Home() {
         </motion.div>
 
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.4 }}
+          {...fadeIn}
+          delay={0.7}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -170,8 +170,8 @@ function Home() {
         </motion.div>
 
         <motion.div 
-          {...fadeIn} 
-          transition={{ delay: 0.5 }}
+          {...fadeIn}
+          delay={0.8}
           className={`${theme.nav} p-6 rounded-lg shadow-lg`}
         >
           <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code']`}>
@@ -189,7 +189,7 @@ function Home() {
       {/* Call to Action */}
       <motion.div 
         {...fadeIn}
-        transition={{ delay: 0.6 }}
+        delay={0.9}
         className="text-center max-w-2xl mx-auto"
       >
         <p className={`${theme.text} text-lg mb-6`}>

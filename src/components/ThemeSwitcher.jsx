@@ -1,24 +1,23 @@
 import { useTheme } from '../context/ThemeContext';
 
 function ThemeSwitcher() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme, currentTheme } = useTheme();
+
+  const handleThemeChange = () => {
+    const themeOrder = ['light', 'dark', 'cyberpunk'];
+    const currentIndex = themeOrder.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themeOrder.length;
+    setTheme(themeOrder[nextIndex]);
+  };
 
   return (
-    <div className="fixed bottom-4 right-4 flex gap-2">
-      <button
-        onClick={() => setTheme('light')}
-        className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600"
-      />
-      <button
-        onClick={() => setTheme('dark')}
-        className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-900 to-purple-900"
-      />
-      <button
-        onClick={() => setTheme('forest')}
-        className="w-8 h-8 rounded-full bg-gradient-to-r from-green-600 to-teal-600"
-      />
-    </div>
+    <button
+      onClick={handleThemeChange}
+      className={`${theme.button} fixed bottom-4 right-4 p-2 rounded-full shadow-lg`}
+    >
+      {currentTheme === 'light' ? '🌙' : currentTheme === 'dark' ? '🎮' : currentTheme === 'cyberpunk' ? '🌞' : '🌙'}
+    </button>
   );
 }
 
-export default ThemeSwitcher; 
+export default ThemeSwitcher;

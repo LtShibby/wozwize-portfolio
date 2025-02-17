@@ -12,6 +12,7 @@ import WordWize from './components/games/WordWize';
 import WizeSnake from './components/games/WizeSnake';
 import PageTransition from './components/PageTransition';
 import Newsletter from './pages/Newsletter';
+import ThemeIcon from './components/ThemeIcon';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -40,6 +41,7 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        <ThemeIcon />
         <AppContent />
       </BrowserRouter>
     </ThemeProvider>
