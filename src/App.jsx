@@ -14,6 +14,8 @@ import PageTransition from './components/PageTransition';
 import Newsletter from './pages/Newsletter';
 import ThemeIcon from './components/ThemeIcon';
 import LearningAssistant from './pages/LearningAssistant';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -32,6 +34,8 @@ function AppContent() {
           <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
           <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
           <Route path="/learning-assistant" element={<PageTransition variant="slide"><LearningAssistant /></PageTransition>} />
+          <Route path="/privacy-policy" element={<PageTransition variant="fade"><PrivacyPolicy /></PageTransition>} />
+          <Route path="/terms-of-service" element={<PageTransition variant="fade"><TermsOfService /></PageTransition>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>
