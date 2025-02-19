@@ -10,7 +10,7 @@ function TermsOfService() {
       <div className="min-h-[calc(100vh-5rem)] p-8 pt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-            &lt;Terms of Service /&gt;
+            Terms of Service
           </h2>
 
           <div className={`${theme.nav} p-6 rounded-lg shadow-lg space-y-8`}>
