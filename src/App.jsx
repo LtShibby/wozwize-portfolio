@@ -33,27 +33,36 @@ function AppContent() {
     <div className={`min-h-screen w-full ${theme.background} overflow-x-hidden flex flex-col`}>
       <Navigation />
       <main className="flex-grow">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<PageTransition variant="scale"><Home /></PageTransition>} />
-            <Route path="/projects" element={<PageTransition variant="slide"><Projects /></PageTransition>} />
-            <Route path="/contact" element={<PageTransition variant="scale"><Contact /></PageTransition>} />
-            <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
-            <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
-            <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
-            <Route path="/learning-assistant" element={<PageTransition variant="slide"><LearningAssistant /></PageTransition>} />
-            <Route path="/privacy-policy" element={<PageTransition variant="fade"><PrivacyPolicy /></PageTransition>} />
-            <Route path="/terms-of-service" element={<PageTransition variant="fade"><TermsOfService /></PageTransition>} />
-            <Route path="/about-us" element={<PageTransition variant="fade"><AboutUs /></PageTransition>} />
-            <Route path="/about-matt" element={<PageTransition variant="fade"><AboutMatt /></PageTransition>} />
-            <Route path="/services" element={<PageTransition variant="slide"><Services /></PageTransition>} />
-            <Route path="/blog" element={<PageTransition variant="slide"><Blog /></PageTransition>} />
-            <Route path="/blog/:slug" element={<PageTransition variant="fade"><BlogPostPage /></PageTransition>} />
-            <Route path="/services/:serviceId" element={<PageTransition variant="fade"><ServiceDetail /></PageTransition>} />
-            <Route path="/services/consulting" element={<PageTransition variant="fade"><ConsultingService /></PageTransition>} />
-            <Route path="/services/freelance" element={<PageTransition variant="fade"><FreelanceService /></PageTransition>} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={location}>
+          <Route path="/" element={<PageTransition variant="scale"><Home /></PageTransition>} />
+          <Route path="/projects" element={<PageTransition variant="slide"><Projects /></PageTransition>} />
+          <Route path="/contact" element={<PageTransition variant="scale"><Contact /></PageTransition>} />
+          <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
+          <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
+          <Route path="/games/wizesnake" element={<PageTransition variant="slide"><WizeSnake /></PageTransition>} />
+          <Route path="/learning-assistant" element={<PageTransition variant="slide"><LearningAssistant /></PageTransition>} />
+          <Route path="/privacy-policy" element={<PageTransition variant="fade"><PrivacyPolicy /></PageTransition>} />
+          <Route path="/terms-of-service" element={<PageTransition variant="fade"><TermsOfService /></PageTransition>} />
+          <Route path="/about-us" element={<PageTransition variant="fade"><AboutUs /></PageTransition>} />
+          <Route
+            path="/about-matt"
+            element={
+              <AnimatePresence mode="wait">
+                <PageTransition variant="fade" key={location.pathname}>
+                  <AboutMatt />
+                </PageTransition>
+              </AnimatePresence>
+            }
+          />
+          <Route path="/services" element={<PageTransition variant="slide"><Services /></PageTransition>} />
+          <Route path="/blog" element={<PageTransition variant="slide"><Blog /></PageTransition>} />
+          <Route path="/blog/:slug" element={<PageTransition variant="fade"><BlogPostPage /></PageTransition>} />
+          <Route path="/services/:serviceId" element={<PageTransition variant="fade"><ServiceDetail /></PageTransition>} />
+          <Route path="/services/consulting" element={<PageTransition variant="fade"><ConsultingService /></PageTransition>} />
+          <Route path="/services/freelance" element={<PageTransition variant="fade"><FreelanceService /></PageTransition>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
         </AnimatePresence>
       </main>
       <Footer />
