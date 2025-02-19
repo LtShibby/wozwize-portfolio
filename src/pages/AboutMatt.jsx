@@ -2,11 +2,9 @@ import { useTheme } from '../context/ThemeContext';
 import PageTransition from '../components/PageTransition';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 function AboutMatt() {
   const { theme } = useTheme();
-  const [showProjects, setShowProjects] = useState(false);
 
   // Bio section content from About.jsx
   const bio = {
@@ -240,25 +238,6 @@ function AboutMatt() {
     </motion.div>
   );
 
-  // Update the projects data with the direct link
-  const projects = [
-    {
-      title: "GPT Suite",
-      description: "A comprehensive suite of AI-powered tools for developers and businesses, featuring custom LLM integrations and specialized workflows.",
-      technologies: ["OpenAI", "React", "Node.js", "MongoDB"],
-      image: "/images/gpt-suite.jpg",
-      link: "/projects/gpt-suite"
-    },
-    {
-      title: "Media Unmask",
-      description: "AI-powered media analysis platform providing transparency and insights into news and social media content.",
-      technologies: ["AI", "Python", "React", "AWS"],
-      image: "/images/media-unmask.jpg",
-      link: "https://mediaunmask.com",  // Updated to direct external link
-      external: true  // Add flag to indicate external link
-    }
-  ];
-
   return (
     <PageTransition>
       <motion.div
@@ -293,12 +272,12 @@ function AboutMatt() {
                         <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matt Wozniak</h4>
                         <p className={`${theme.text} opacity-75 mb-4`}>Founder & Lead Engineer</p>
                       </div>
-                      <button
-                        onClick={() => setShowProjects(true)}
+                      <Link
+                        to="/projects"
                         className={`${theme.button} px-4 py-2 rounded hover:opacity-90 transition-all`}
                       >
                         View Projects
-                      </button>
+                      </Link>
                     </div>
                     <p className={`${theme.text} mb-4 pr-4`}>
                       {bio.summary}
@@ -437,45 +416,6 @@ function AboutMatt() {
             </motion.section>
           </div>
         </div>
-
-        {/* Add Projects Modal */}
-        <AnimatePresence>
-          {showProjects && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="fixed inset-0 bg-black bg-opacity-50 z-40"
-                onClick={() => setShowProjects(false)}
-              />
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                className={`fixed inset-x-4 top-20 bottom-20 md:inset-x-auto md:left-1/2 md:right-20 
-                  ${theme.nav} rounded-lg shadow-xl z-50 overflow-y-auto`}
-              >
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-6">
-                    <h3 className={`${theme.text} text-2xl font-bold font-['Fira_Code']`}>Featured Projects</h3>
-                    <button
-                      onClick={() => setShowProjects(false)}
-                      className={`${theme.text} text-2xl hover:opacity-70`}
-                    >
-                      ×
-                    </button>
-                  </div>
-                  <div className="space-y-6">
-                    {projects.map((project, index) => (
-                      <FeaturedProject key={index} project={project} index={index} />
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </motion.div>
     </PageTransition>
   );
