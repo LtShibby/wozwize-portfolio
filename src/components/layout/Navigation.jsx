@@ -19,7 +19,7 @@ function Navigation() {
       path: '/',
     },
     { 
-      label: 'About',
+      label: 'About Us',
       path: '/about-us',
     },
     {
@@ -28,7 +28,9 @@ function Navigation() {
       submenu: [
         { label: 'AI Development', path: '/services/ai-development' },
         { label: 'Tech Coaching', path: '/services/coaching' },
-        { label: 'Software Solutions', path: '/services/software' }
+        { label: 'Software Solutions', path: '/services/software' },
+        { label: 'Enterprise Consulting', path: '/services/consulting' },
+        { label: 'Freelance Engineering', path: '/services/freelance' }
       ]
     },
     { 

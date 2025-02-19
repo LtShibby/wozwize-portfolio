@@ -16,16 +16,16 @@ function HeroSection() {
   const mottoParts = [
     { text: "Technology should ", highlight: false },
     { text: "solve real problems", highlight: true },
-    { text: ", not create new ones.", highlight: false }
+    { text: " not create new ones.", highlight: false }
   ];
 
   return (
     <div className={`${theme.nav} p-8 md:p-16 rounded-lg shadow-lg text-center`}>
       {/* Motto with typing and highlight animation */}
       <div className="mb-12">
-        <div className="inline-block">
+        <div className="inline-block relative">
           {mottoParts.map((part, partIndex) => (
-            <span key={partIndex} className="relative inline">
+            <span key={partIndex} className="relative inline-block mx-[0.15em]">
               {part.text.split("").map((char, charIndex) => (
                 <motion.span
                   key={charIndex}
@@ -50,7 +50,8 @@ function HeroSection() {
                     delay: partIndex * 0.5 + 1,
                     ease: "easeOut"
                   }}
-                  className={`absolute inset-0 bg-${getHighlightColor()} -skew-x-6 z-0`}
+                  className={`absolute inset-0 bg-${getHighlightColor()} -skew-x-6 z-0 
+                    transform-gpu`}
                 />
               )}
             </span>

@@ -6,7 +6,6 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import { useTheme } from './context/ThemeContext';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import About from './pages/About';
 import Contact from './pages/Contact';
 import WordWize from './components/games/WordWize';
 import WizeSnake from './components/games/WizeSnake';
@@ -23,6 +22,8 @@ import Blog from './pages/Blog';
 import BlogPostPage from './pages/BlogPostPage';
 import ServiceDetail from './pages/ServiceDetail';
 import Footer from './components/layout/Footer';
+import ConsultingService from './pages/services/ConsultingService';
+import FreelanceService from './pages/services/FreelanceService';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -36,7 +37,6 @@ function AppContent() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<PageTransition variant="scale"><Home /></PageTransition>} />
             <Route path="/projects" element={<PageTransition variant="slide"><Projects /></PageTransition>} />
-            <Route path="/about" element={<PageTransition variant="fade"><About /></PageTransition>} />
             <Route path="/contact" element={<PageTransition variant="scale"><Contact /></PageTransition>} />
             <Route path="/newsletter" element={<PageTransition variant="scale"><Newsletter /></PageTransition>} />
             <Route path="/games/wordwize" element={<PageTransition variant="slide"><WordWize /></PageTransition>} />
@@ -50,6 +50,8 @@ function AppContent() {
             <Route path="/blog" element={<PageTransition variant="slide"><Blog /></PageTransition>} />
             <Route path="/blog/:slug" element={<PageTransition variant="fade"><BlogPostPage /></PageTransition>} />
             <Route path="/services/:serviceId" element={<PageTransition variant="fade"><ServiceDetail /></PageTransition>} />
+            <Route path="/services/consulting" element={<PageTransition variant="fade"><ConsultingService /></PageTransition>} />
+            <Route path="/services/freelance" element={<PageTransition variant="fade"><FreelanceService /></PageTransition>} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </AnimatePresence>

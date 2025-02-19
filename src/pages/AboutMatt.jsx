@@ -273,7 +273,7 @@ function AboutMatt() {
 
         <div className="relative">
           <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-            &lt;About Matt /&gt;
+            About Matt 
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-12">

@@ -20,7 +20,7 @@ function PageLayout({ children, title, subtitle, showBreadcrumb = true }) {
             >
               {title && (
                 <h1 className={`${theme.text} text-3xl md:text-4xl font-bold mb-4 font-['Fira_Code']`}>
-                  &lt;{title} /&gt;
+                  {title} 
                 </h1>
               )}
               {subtitle && (
