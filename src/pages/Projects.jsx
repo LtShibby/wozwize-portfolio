@@ -154,7 +154,7 @@ function Projects() {
       className="min-h-[calc(100vh-5rem)] p-8"
     >
       <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-        &lt;Projects /&gt;
+        Projects
       </h2>
       
       <div className="max-w-6xl mx-auto space-y-12">
