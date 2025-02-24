@@ -66,7 +66,7 @@ wozwize-portfolio/
 
 ## Contact
 
-[Add your contact information here]
+wozwize.com/contact
 
 ## License
 
