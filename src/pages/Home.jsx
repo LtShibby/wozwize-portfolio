@@ -12,7 +12,16 @@ function Home() {
     {
       title: "Media Unmask",
       description: "AI-powered media analysis platform providing transparency and insights into news and social media content.",
-      technologies: ["AI", "Python", "React", "AWS"],
+      technologies: [
+        "AI", 
+        "Machine Learning", 
+        "Python", 
+        "FastAPI", 
+        "Next.js", 
+        "Vercel", 
+        "Hugging Face",
+        "NLP"
+      ],
       image: "/images/media-unmask.jpg",
       link: "https://mediaunmask.com"
     }
