@@ -66,7 +66,7 @@ function BlogPost({ post }) {
           <div>
             <h3 className={`${theme.text} font-bold`}>Matt Wozniak</h3>
             <p className={`${theme.text} opacity-75`}>
-              Founder of WozWize, AI Developer & Tech Consultant
+              Director of Digital Solutions at WozWize, AI Developer & Tech Consultant
             </p>
           </div>
         </div>

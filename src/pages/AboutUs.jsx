@@ -86,7 +86,7 @@ function AboutUs() {
                 </div>
                 <div>
                   <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matt Wozniak</h4>
-                  <p className={`${theme.text} opacity-75 mb-4`}>Founder & Lead Engineer</p>
+                  <p className={`${theme.text} opacity-75 mb-4`}>Director of Digital Solutions at WozWize</p>
                   <p className={`${theme.text} mb-4`}>
                     With over a decade of experience in software development and AI, 
                     Matt leads WozWize's vision of innovative technology solutions.

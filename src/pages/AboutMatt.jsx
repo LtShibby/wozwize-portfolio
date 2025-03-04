@@ -270,7 +270,7 @@ function AboutMatt() {
                     <div className="flex justify-between items-start">
                       <div>
                         <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matt Wozniak</h4>
-                        <p className={`${theme.text} opacity-75 mb-4`}>Founder & Lead Engineer</p>
+                        <p className={`${theme.text} opacity-75 mb-4`}>Director of Digital Solutions at WozWize</p>
                       </div>
                       <Link
                         to="/projects"
