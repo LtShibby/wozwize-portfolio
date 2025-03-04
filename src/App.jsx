@@ -24,6 +24,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import Footer from './components/layout/Footer';
 import ConsultingService from './pages/services/ConsultingService';
 import FreelanceService from './pages/services/FreelanceService';
+import ClientCustomWebsiteQuestionnaire from './pages/ClientCustomWebsiteQuestionnaire';
 
 function AppContent() {
   const { theme } = useTheme();
@@ -45,6 +46,7 @@ function AppContent() {
           <Route path="/privacy-policy" element={<PageTransition variant="fade"><PrivacyPolicy /></PageTransition>} />
           <Route path="/terms-of-service" element={<PageTransition variant="fade"><TermsOfService /></PageTransition>} />
           <Route path="/about-us" element={<PageTransition variant="fade"><AboutUs /></PageTransition>} />
+          <Route path="/questionnaire/custom-website" element={<PageTransition variant="fade"><ClientCustomWebsiteQuestionnaire /></PageTransition>} />
           <Route
             path="/about-matt"
             element={
