@@ -262,7 +262,7 @@ function AboutMatt() {
                   <div className="w-32 h-32 rounded-full overflow-hidden">
                     <img 
                       src="/images/matt-headshot.jpg" 
-                      alt="Matt Wozniak - Founder of WozWize"
+                      alt="Matt Wozniak - Director of Digital Solutions at WozWize"
                       className="w-full h-full object-cover"
                     />
                   </div>
