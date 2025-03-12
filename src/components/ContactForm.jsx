@@ -26,13 +26,22 @@ function ContactForm() {
     setStatus({ sending: true, sent: false, error: null });
 
     try {
-      await emailjs.send(
+      console.log('Sending form data:', formData);
+      
+      const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formData,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          subject: formData.subject,
+          type: formData.type
+        },
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
+      console.log('EmailJS Response:', response);
       setStatus({ sending: false, sent: true, error: null });
       setFormData({
         name: '',
@@ -42,6 +51,7 @@ function ContactForm() {
         type: 'general'
       });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus({
         sending: false,
         sent: false,
