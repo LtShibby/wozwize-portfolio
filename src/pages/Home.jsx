@@ -52,23 +52,6 @@ function Home() {
     <PageTransition>
       <div className="min-h-[calc(100vh-5rem)] p-8 pt-12">
         <div className="max-w-6xl mx-auto space-y-16">
-          {/* Custom Website Banner */}
-          <section className="relative pt-20">
-            <div className={`${theme.nav} p-8 rounded-lg shadow-lg text-center transform hover:scale-[1.02] transition-transform duration-300`}>
-              <h2 className={`${theme.text} text-2xl font-bold mb-4 font-['Fira_Code']`}>
-                Looking for a Custom Website?
-              </h2>
-              <p className={`${theme.text} mb-6 text-lg`}>
-                Take the first step towards your dream website! Fill out our questionnaire for a <span className="font-semibold">free consultation</span> to get the process started.
-              </p>
-              <Link 
-                to="/questionnaire/custom-website"
-                className={`${theme.button} px-8 py-4 rounded-lg inline-block hover:opacity-90 transition-all text-lg font-semibold`}
-              >
-                Start Your Website Journey →
-              </Link>
-            </div>
-          </section>
 
           {/* Hero Section */}
           <HeroSection />
@@ -94,6 +77,23 @@ function Home() {
               {featuredProjects.map((project, index) => (
                 <FeaturedProject key={index} project={project} index={index} />
               ))}
+            </div>
+          </section>
+
+          <section className="relative pt-20">
+            <div className={`${theme.nav} p-8 rounded-lg shadow-lg text-center transform hover:scale-[1.02] transition-transform duration-300`}>
+              <h2 className={`${theme.text} text-2xl font-bold mb-4 font-['Fira_Code']`}>
+                Looking for a Custom Website?
+              </h2>
+              <p className={`${theme.text} mb-6 text-lg`}>
+                Take the first step towards your dream website! Fill out our questionnaire for a <span className="font-semibold">free consultation</span> to get the process started.
+              </p>
+              <Link 
+                to="/questionnaire/custom-website"
+                className={`${theme.button} px-8 py-4 rounded-lg inline-block hover:opacity-90 transition-all text-lg font-semibold`}
+              >
+                Start Your Website Journey →
+              </Link>
             </div>
           </section>
 
