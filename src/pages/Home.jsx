@@ -80,7 +80,7 @@ function Home() {
             </div>
           </section>
 
-          <section className="relative pt-20">
+          <section className="relative">
             <div className={`${theme.nav} p-8 rounded-lg shadow-lg text-center transform hover:scale-[1.02] transition-transform duration-300`}>
               <h2 className={`${theme.text} text-2xl font-bold mb-4 font-['Fira_Code']`}>
                 Looking for a Custom Website?
