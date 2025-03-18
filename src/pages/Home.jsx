@@ -25,7 +25,7 @@ function Home() {
       image: "/images/media-unmask.jpg",
       link: "https://mediaunmask.com",
       status: "Beta",
-      launchDate: "2024-01-15",
+      launchDate: "2024-02-14",
       category: "AI & Machine Learning",
       isFeatured: true
     },
