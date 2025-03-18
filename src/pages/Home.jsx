@@ -37,7 +37,6 @@ function Home() {
         "TypeScript",
         "FastAPI",
         "PostgreSQL",
-        "AI",
         "Supabase",
         "Tailwind CSS",
         "OAuth2"
