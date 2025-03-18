@@ -24,9 +24,19 @@ function FeaturedProject({ project, index }) {
       </div>
       <div className="w-full md:w-2/3">
         <div className="flex flex-col">
-          <h3 className={`${theme.text} text-2xl font-bold mb-1 relative group`}>
-            {project.title}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+          <h3 className={`${theme.text} text-2xl font-bold mb-1 relative group flex items-center gap-2`}>
+            <a 
+              href={project.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity inline-block"
+            >
+              {project.title}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <span className={`text-sm ${theme.text} opacity-0 transition-all duration-300 group-hover:opacity-75 whitespace-nowrap`}>
+              Click to check out the live site!
+            </span>
           </h3>
           {project.launchDate && (
             <span className={`text-sm ${theme.text} opacity-75 mb-2`}>
