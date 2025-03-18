@@ -24,6 +24,40 @@ function Home() {
       ],
       image: "/images/media-unmask.jpg",
       link: "https://mediaunmask.com"
+    },
+    {
+      "title": "ProfessionHall",
+      "description": "A resume-free hiring platform connecting professionals with companies through real projects, portfolios, and work samples. Features AI-powered skill mapping and smart matching for better talent discovery.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "AI",
+        "Supabase",
+        "Tailwind CSS",
+        "OAuth2"
+      ],
+      "image": "/images/professionHallBanner.jpg",
+      "link": "https://professionhall.com"
+    },
+    {
+      "title": "ArchWize",
+      "description": "AI-powered SaaS application that generates diagrams and architecture flowcharts from text descriptions using natural language processing and the Mistral-7B model.",
+      "technologies": [
+        "AI",
+        "Machine Learning",
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "React",
+        "Mermaid.js",
+        "Hugging Face",
+        "NLP",
+        "Vercel"
+      ],
+      "image": "/images/archwize.jpg",
+      "link": "https://archwize.com"
     }
   ];
 
