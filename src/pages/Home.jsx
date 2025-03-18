@@ -23,7 +23,11 @@ function Home() {
         "NLP"
       ],
       image: "/images/media-unmask.jpg",
-      link: "https://mediaunmask.com"
+      link: "https://mediaunmask.com",
+      status: "Beta",
+      launchDate: "2024-01-15",
+      category: "AI & Machine Learning",
+      isFeatured: true
     },
     {
       "title": "ProfessionHall",
@@ -39,7 +43,9 @@ function Home() {
         "OAuth2"
       ],
       "image": "/images/professionHallBanner.jpg",
-      "link": "https://professionhall.com"
+      "link": "https://professionhall.com",
+      "status": "Alpha",
+      "category": "Professional Network"
     },
     {
       "title": "ArchWize",
@@ -57,7 +63,9 @@ function Home() {
         "Vercel"
       ],
       "image": "/images/archwize.jpg",
-      "link": "https://archwize.com"
+      "link": "https://archwize.com",
+      "status": "Alpha",
+      "category": "AI & Development Tools"
     }
   ];
 
