@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import Fuse from 'fuse.js';
 import { ChevronDown, ChevronRight, Search } from 'lucide-react';
+import React from 'react';
 
 const skillCategories = [
   {
