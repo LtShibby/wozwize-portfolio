@@ -36,15 +36,17 @@ function MattProfile() {
         "Implemented A/B testing framework for scoring algorithm refinement",
         "Achieved 40% improvement in lead qualification accuracy"
       ]
+    },
+    {
+      title: "MediaUnmask: Ethical AI Watchdog",
+      client: "Internal / WozWize",
+      details: [
+        "Designed and built a real-time platform to analyze media bias and sentiment",
+        "Implemented fact-check vs. content contradiction detection using LLMs",
+        "Built custom scoring algorithm to flag ethical inconsistencies and manipulative tone",
+        "Focused on explainability and transparency in model output to promote responsible AI"
+      ]
     }
-  ];
-
-  const skills = [
-    { category: "Front-End", technologies: "React, Angular, TypeScript, Tailwind" },
-    { category: "Back-End", technologies: "Node.js, Express, Python (Flask/FastAPI)" },
-    { category: "DevOps", technologies: "GitHub Actions, Azure DevOps" },
-    { category: "Cloud", technologies: "Azure Static Web Apps, AWS Lambda" },
-    { category: "AI/ML Integration", technologies: "REST APIs for ML models, NLP dashboards, Real-time data viz" }
   ];
 
   const strengths = [
@@ -52,7 +54,8 @@ function MattProfile() {
     "Adaptable to Azure & AWS environments",
     "UI/UX-focused — I don't ship ugly",
     "End-to-end delivery — no hand-holding needed",
-    "Proactive communicator in client-facing settings"
+    "Proactive communicator in client-facing settings",
+    "Committed to ethical AI practices and transparency in deployment"
   ];
 
   return (
@@ -62,7 +65,7 @@ function MattProfile() {
 
           {/* Header Section */}
           <header className="text-center space-y-5 pt-12">
-            <h1 className="text-5xl font-bold ${theme.text} tracking-tight">
+            <h1 className={`text-5xl font-bold ${theme.text} tracking-tight`}>
               Matthew J. Wozniak
             </h1>
             <p className={`text-xl ${theme.textSecondary} max-w-3xl mx-auto leading-relaxed`}>
@@ -82,7 +85,7 @@ function MattProfile() {
           {/* Projects Section */}
           <section className="space-y-6">
             <h2 className={`text-3xl font-bold ${theme.accent}`}>Relevant Project Experience</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
               {projects.map((project, index) => (
                 <div
                   key={index}
