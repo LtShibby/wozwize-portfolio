@@ -27,10 +27,8 @@ function Navigation() {
       path: '/services',
       submenu: [
         { label: 'AI Development', path: '/services/ai-development' },
-        { label: 'Tech Coaching', path: '/services/coaching' },
         { label: 'Software Solutions', path: '/services/software' },
-        { label: 'Enterprise Consulting', path: '/services/consulting' },
-        { label: 'Freelance Engineering', path: '/services/freelance' }
+        { label: 'Fractional CTO', path: '/services/cto' }
       ]
     },
     { 
@@ -60,8 +58,12 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className={`${theme.text} font-bold text-xl`}>
-            WozWize
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/images/wozwize-logo-2.jpg" 
+              alt="WozWize Logo" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Menu */}

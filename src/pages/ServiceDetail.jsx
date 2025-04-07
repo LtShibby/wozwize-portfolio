@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
 
-// This would typically come from an API or CMS
 const serviceDetails = {
   'ai-development': {
     title: "AI Development",
@@ -135,6 +134,41 @@ const serviceDetails = {
     ],
     technologies: ["NLP", "Machine Learning", "Big Data", "Python", "Cloud Computing"]
   },
+  'cto': {
+    title: "Fractional CTO",
+    subtitle: "Executive Technology Leadership on Demand",
+    icon: "👨‍💼",
+    description: "Access experienced technology leadership without the full-time commitment. Our Fractional CTO service provides strategic guidance, technical oversight, and hands-on expertise to help your business scale effectively.",
+    features: [
+      "Strategic Technology Planning",
+      "Technical Team Leadership",
+      "Architecture & Infrastructure Design",
+      "Technology Stack Selection",
+      "Vendor & Partner Management",
+      "Technical Due Diligence",
+      "Innovation Roadmap Development",
+      "Cost Optimization Strategies"
+    ],
+    process: [
+      {
+        title: "Assessment",
+        description: "Comprehensive evaluation of your current technology landscape and business goals"
+      },
+      {
+        title: "Strategy Development",
+        description: "Creating a tailored technology roadmap aligned with business objectives"
+      },
+      {
+        title: "Implementation",
+        description: "Guiding execution while maintaining flexibility for evolving needs"
+      },
+      {
+        title: "Ongoing Support",
+        description: "Regular reviews and adjustments to ensure continued alignment with business goals"
+      }
+    ],
+    technologies: ["Strategic Planning", "Team Leadership", "Architecture Design", "Cloud Solutions", "DevOps", "Security", "Scalability"]
+  },
   // Add more services...
 };
 
@@ -155,7 +189,7 @@ function ServiceDetail() {
     >
       <div className="space-y-12">
         {/* Overview */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg`}>
+        <section className={`${theme.nav} p-8 rounded-lg shadow-lg border-2 ${theme.button.replace('bg-', 'border-')} text-center`}>
           <h2 className={`${theme.text} text-2xl font-bold mb-4`}>Overview</h2>
           <p className={`${theme.text} text-lg leading-relaxed`}>
             {service.description}
@@ -163,7 +197,7 @@ function ServiceDetail() {
         </section>
 
         {/* Features */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg`}>
+        <section className={`${theme.nav} p-8 rounded-lg shadow-lg border-2 ${theme.button.replace('bg-', 'border-')} text-center`}>
           <h2 className={`${theme.text} text-2xl font-bold mb-6`}>Key Features</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {service.features.map((feature, index) => (
@@ -171,7 +205,7 @@ function ServiceDetail() {
                 key={index}
                 className={`${theme.text} flex items-center gap-2`}
               >
-                <span className="text-green-500">✓</span>
+                <span className="text-green-500 text-xl">✓</span>
                 {feature}
               </div>
             ))}
@@ -179,14 +213,14 @@ function ServiceDetail() {
         </section>
 
         {/* Process */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg`}>
-          <h2 className={`${theme.text} text-2xl font-bold mb-6`}>Our Process</h2>
+        <section className={`${theme.nav} ${theme.border} border p-8 rounded-lg shadow-lg border-2`}>
+          <h2 className={`${theme.text} text-2xl font-bold mb-6 text-center`}>Our Process</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {service.process.map((step, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.02 }}
-                className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+                className={`${theme.nav} ${theme.border} border p-6 rounded-lg shadow-lg border-2`}
               >
                 <h3 className={`${theme.text} text-xl font-bold mb-2`}>
                   {index + 1}. {step.title}
@@ -200,13 +234,13 @@ function ServiceDetail() {
         </section>
 
         {/* Technologies */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg`}>
+        <section className={`${theme.nav} ${theme.border} border p-8 rounded-lg shadow-lg border-2 text-center`}>
           <h2 className={`${theme.text} text-2xl font-bold mb-6`}>Technologies</h2>
           <div className="flex flex-wrap gap-3">
             {service.technologies.map((tech, index) => (
               <span
                 key={index}
-                className={`${theme.text} px-4 py-2 rounded-full bg-black bg-opacity-10`}
+                className={`${theme.text} ${theme.border} border px-4 py-2 rounded-full border-2 text-center`}
               >
                 {tech}
               </span>

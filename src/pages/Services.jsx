@@ -8,16 +8,10 @@ function Services() {
 
   const services = [
     {
-      title: "AI & ML Development",
-      description: "Custom AI solutions, model development, and integration services for businesses.",
-      icon: "🤖",
-      link: "/services/ai-development"
-    },
-    {
-      title: "Tech Coaching & Mentorship",
-      description: "Personalized guidance for developers and teams in modern technologies.",
-      icon: "👥",
-      link: "/services/coaching"
+      title: "Fractional CTO",
+      description: "Tech Strategy without the full-time burn rate.",
+      icon: "📈",
+      link: "/services/cto"
     },
     {
       title: "Custom Software Solutions",
@@ -26,10 +20,16 @@ function Services() {
       link: "/services/software"
     },
     {
-      title: "AI-Powered Media Analysis",
-      description: "Advanced tools for content analysis and media transparency.",
-      icon: "📊",
-      link: "/services/media-analysis"
+      title: "AI & Automation",
+      description: "Build smarter systems, not just fancier interfaces.",
+      icon: "🤖",
+      link: "/services/ai-development"
+    },
+    {
+      title: "Tech Coaching & Mentorship",
+      description: "Personalized guidance for developers and teams in modern technologies.",
+      icon: "👥",
+      link: "/services/coaching"
     },
     {
       title: "Enterprise Consulting",
@@ -88,12 +88,12 @@ function Services() {
 
           {/* FAQ Section */}
           <section>
-            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>
+            <h3 className={`${theme.text} text-center text-2xl font-bold mb-6 font-['Fira_Code']`}>
               Frequently Asked Questions
             </h3>
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
+                <div key={index} className={`${theme.nav} ${theme.border} border p-6 rounded-lg shadow-lg`}>
                   <h4 className={`${theme.text} font-bold mb-2`}>{faq.question}</h4>
                   <p className={`${theme.text} opacity-75`}>{faq.answer}</p>
                 </div>
@@ -103,14 +103,14 @@ function Services() {
 
           {/* CTA Section */}
           <section>
-            <div className={`${theme.nav} p-8 rounded-lg shadow-lg text-center`}>
+            <div className={`${theme.nav} ${theme.borderAlt} border p-8 rounded-lg shadow-lg text-center`}>
               <h3 className={`${theme.text} text-2xl font-bold mb-4`}>Ready to Get Started?</h3>
               <p className={`${theme.text} mb-6`}>
                 Book a consultation to discuss your project needs and how we can help.
               </p>
               <Link 
                 to="/contact"
-                className={`${theme.button} px-6 py-3 rounded inline-block hover:opacity-90 transition-all`}
+                className={`${theme.buttonAlt} px-6 py-3 rounded inline-block hover:opacity-90 transition-all`}
               >
                 Schedule Consultation
               </Link>

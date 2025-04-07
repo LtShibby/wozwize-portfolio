@@ -8,7 +8,7 @@ function FeaturedProject({ project, index }) {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`${theme.nav} shadow-lg p-6 rounded-lg flex flex-col md:flex-row gap-6 items-center transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`}
+      className={`${theme.nav} ${theme.border} border shadow-lg p-6 rounded-lg flex flex-col md:flex-row gap-6 items-center transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-500/5 hover:to-purple-500/5`}
     >
       <div className="relative w-full md:w-1/3 overflow-hidden rounded-lg">
         {project.isFeatured && (

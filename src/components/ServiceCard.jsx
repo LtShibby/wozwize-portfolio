@@ -8,7 +8,7 @@ function ServiceCard({ service }) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+      className={`${theme.nav} ${theme.border} border p-6 rounded-lg shadow-lg text-center`}
     >
       <div className="text-4xl mb-4">{service.icon}</div>
       <h3 className={`${theme.text} text-xl font-bold mb-2`}>{service.title}</h3>

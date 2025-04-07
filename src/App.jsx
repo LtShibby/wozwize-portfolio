@@ -72,7 +72,7 @@ function AppContent() {
         </AnimatePresence>
       </main>
       <Footer />
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher /> */}
     </div>
   );
 }

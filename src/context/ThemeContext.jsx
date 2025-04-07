@@ -26,11 +26,22 @@ const themes = {
     nav: 'bg-black/50 backdrop-blur-md shadow-lg border border-cyan-500/20',
     button: 'bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-black',
     accent: 'text-fuchsia-400'
+  },
+  wozwize: {
+    primary: 'from-blue-400 via-cyan-500 to-yellow-300',
+    background: 'bg-black',
+    text: 'text-blue-100',
+    nav: 'bg-black/70 backdrop-blur-md shadow-lg',
+    button: 'bg-blue-500 hover:bg-blue-600 text-white',
+    buttonAlt: 'bg-yellow-400 hover:bg-yellow-500 text-black', 
+    accent: 'text-yellow-400',
+    border: 'border-blue-500',
+    borderAlt: 'border-yellow-400'
   }
 };
 
 export function ThemeProvider({ children }) {
-  const [currentTheme, setCurrentTheme] = useState('light');
+  const [currentTheme, setCurrentTheme] = useState('wozwize');
 
   const setTheme = (newTheme) => {
     if (themes[newTheme]) {
