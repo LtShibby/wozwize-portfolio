@@ -62,10 +62,10 @@ function Blog() {
                   setSelectedCategory(category.id);
                   setCurrentPage(1);
                 }}
-                className={`${theme.text} px-4 py-2 rounded transition-all
+                className={`px-4 py-2 rounded transition-all
                   ${selectedCategory === category.id
-                    ? theme.button
-                    : `${theme.nav} hover:opacity-80`}`}
+                    ? `${theme.button}`
+                    : `${theme.nav} ${theme.text} ${theme.border} border hover:opacity-80`}`}
               >
                 {category.name}
               </button>

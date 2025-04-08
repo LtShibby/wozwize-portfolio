@@ -10,7 +10,7 @@ function BlogCard({ post, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className={`${theme.nav} p-6 rounded-lg shadow-lg`}
+      className={`${theme.nav} ${theme.border} border p-6 rounded-lg shadow-lg`}
     >
       {post.image && (
         <div className="mb-4 w-full h-48 rounded-lg overflow-hidden relative">
@@ -45,4 +45,4 @@ function BlogCard({ post, index }) {
   );
 }
 
-export default BlogCard; 
+export default BlogCard;
