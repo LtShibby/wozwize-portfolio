@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import blogPosts from '../../data/blogPosts.jsx';
+import blogPosts from '../../content/blogPosts.tsx';
 
 const BlogContext = createContext();
 
