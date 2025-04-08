@@ -31,11 +31,11 @@ function BlogPost({ post }) {
 
       {/* Featured Image */}
       {post.image && (
-        <div className="w-full aspect-video rounded-lg overflow-hidden">
+        <div className="relative w-full aspect-video rounded-lg overflow-hidden">
           <img 
             src={post.image} 
             alt={post.title}
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
       )}

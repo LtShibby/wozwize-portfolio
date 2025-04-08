@@ -3,6 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import PageTransition from '../components/PageTransition';
 import BlogCard from '../components/BlogCard';
 import { useBlog } from '../components/BlogProvider';
+import { useState } from 'react';
 
 function Blog() {
   const { theme } = useTheme();
@@ -17,10 +18,26 @@ function Blog() {
   const categories = [
     { id: 'all', name: 'All Posts' },
     { id: 'ai', name: 'AI & ML' },
-    { id: 'software', name: 'Software Dev' },
+    { id: 'software', name: 'Software Development' },
     { id: 'leadership', name: 'Tech Leadership' },
-    { id: 'tutorials', name: 'Tutorials' }
+    { id: 'strategy', name: 'Tech Strategy' },
   ];
+
+  // Pagination logic
+  const postsPerPage = 6;
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const paginatedPosts = filteredPosts.slice(
+    (currentPage - 1) * postsPerPage,
+    currentPage * postsPerPage
+  );
+
+  const goToPage = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <PageTransition>
@@ -41,7 +58,10 @@ function Blog() {
             {categories.map(category => (
               <button
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={() => {
+                  setSelectedCategory(category.id);
+                  setCurrentPage(1);
+                }}
                 className={`${theme.text} px-4 py-2 rounded transition-all
                   ${selectedCategory === category.id
                     ? theme.button
@@ -57,9 +77,40 @@ function Blog() {
               <p className={`${theme.text} text-center mt-12`}>No posts found.</p>
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredPosts.map((post, index) => (
+                {paginatedPosts.map((post, index) => (
                   <BlogCard key={post.slug} post={post} index={index} />
                 ))}
+              </div>
+            )}
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="flex justify-center mt-10 gap-4">
+                <button
+                  onClick={() => goToPage(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`${theme.button} px-4 py-2 rounded disabled:opacity-50`}
+                >
+                  ← Prev
+                </button>
+                {[...Array(totalPages)].map((_, i) => (
+                  <button
+                    key={i + 1}
+                    onClick={() => goToPage(i + 1)}
+                    className={`${theme.text} px-3 py-1 rounded transition-all ${
+                      currentPage === i + 1 ? theme.button : `${theme.nav} hover:opacity-80`
+                    }`}
+                  >
+                    {i + 1}
+                  </button>
+                ))}
+                <button
+                  onClick={() => goToPage(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`${theme.button} px-4 py-2 rounded disabled:opacity-50`}
+                >
+                  Next →
+                </button>
               </div>
             )}
           </section>
@@ -82,7 +133,6 @@ function Blog() {
           </section>
         </div>
       </div>
-      
     </PageTransition>
   );
 }

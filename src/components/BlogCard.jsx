@@ -13,10 +13,11 @@ function BlogCard({ post, index }) {
       className={`${theme.nav} p-6 rounded-lg shadow-lg`}
     >
       {post.image && (
-        <div className="mb-4">
-          <div 
-            className="w-full h-48 rounded-lg bg-cover bg-center"
-            style={{ backgroundImage: `url(${post.image})` }}
+        <div className="mb-4 w-full h-48 rounded-lg overflow-hidden relative">
+          <img 
+            src={post.image} 
+            alt={post.title}
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
       )}
