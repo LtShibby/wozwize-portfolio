@@ -9,7 +9,7 @@ function HeroSection() {
   // Get highlight color directly from theme.button
   const getHighlightColor = () => {
     // Extract the color from theme.button and apply higher opacity
-    return theme.buttonAlt.replace('bg-', '') + ' bg-opacity-60';
+    return theme.button.replace('bg-', '') + ' bg-opacity-60';
   };
 
   // Split motto into parts for selective highlighting
