@@ -1,6 +1,5 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/layout/PageTransition.jsx';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';
@@ -189,7 +188,7 @@ function ServiceDetail() {
     >
       <div className="space-y-12">
         {/* Overview */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg border-2 ${theme.button.replace('bg-', 'border-')} text-center`}>
+        <section className={`${theme.nav} ${theme.border} border p-8 rounded-lg shadow-lg ${theme.border} text-center`}>
           <h2 className={`${theme.text} text-2xl font-bold mb-4`}>Overview</h2>
           <p className={`${theme.text} text-lg leading-relaxed`}>
             {service.description}
@@ -197,7 +196,7 @@ function ServiceDetail() {
         </section>
 
         {/* Features */}
-        <section className={`${theme.nav} p-8 rounded-lg shadow-lg border-2 ${theme.button.replace('bg-', 'border-')} text-center`}>
+        <section className={`${theme.nav} ${theme.border} border p-8 rounded-lg shadow-lg ${theme.border} text-center`}>
           <h2 className={`${theme.text} text-2xl font-bold mb-6`}>Key Features</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {service.features.map((feature, index) => (
