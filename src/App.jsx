@@ -27,7 +27,7 @@ import FreelanceService from './pages/services/FreelanceService';
 import ClientCustomWebsiteQuestionnaire from './pages/ClientCustomWebsiteQuestionnaire';
 import MattProfile from './pages/MattProfile';
 import Chat from './pages/Chat';
-
+import ScrollToTop from './ScrollToTop';
 function AppContent() {
   const { theme } = useTheme();
   const location = useLocation();
@@ -36,6 +36,7 @@ function AppContent() {
     <div className={`min-h-screen w-full ${theme.background} overflow-x-hidden flex flex-col`}>
       <Navigation />
       <main className="flex-grow">
+      <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location}>
           <Route path="/" element={<PageTransition variant="scale"><Home /></PageTransition>} />
