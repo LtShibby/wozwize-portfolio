@@ -161,9 +161,7 @@ function Projects() {
         {Object.entries(projectSections).map(([sectionKey, section]) => (
           <div key={sectionKey}>
             <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] flex items-center gap-2`}>
-              <span className="text-xl opacity-50">&lt;</span>
               {section.title}
-              <span className="text-xl opacity-50">/&gt;</span>
             </h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {section.items.map((project, index) => (

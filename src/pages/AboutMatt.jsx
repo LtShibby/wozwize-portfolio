@@ -219,9 +219,7 @@ function AboutMatt() {
     >
       <div className="absolute -right-8 -top-8 w-24 h-24 bg-current opacity-5 rounded-full blur-xl" />
       <h3 className={`${theme.text} text-xl font-bold mb-4 font-['Fira_Code'] flex items-center gap-2`}>
-        <span className="text-sm opacity-50">&lt;</span>
         {title}
-        <span className="text-sm opacity-50">/&gt;</span>
       </h3>
       <div className="flex flex-wrap gap-2">
         {items.map((skill, index) => (
@@ -289,9 +287,7 @@ function AboutMatt() {
 
             <motion.section variants={sectionVariants}>
               <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] flex items-center gap-2`}>
-                <span className="text-xl opacity-50">&lt;</span>
                 Education
-                <span className="text-xl opacity-50">/&gt;</span>
               </h3>
               <div className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
                 {education.map((edu, index) => (
@@ -307,9 +303,7 @@ function AboutMatt() {
 
             <motion.section variants={sectionVariants}>
               <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] flex items-center gap-2`}>
-                <span className="text-xl opacity-50">&lt;</span>
                 Writing and Publications
-                <span className="text-xl opacity-50">/&gt;</span>
               </h3>
               <div className="space-y-6">
                 {publications.map((pub, index) => (
@@ -365,9 +359,7 @@ function AboutMatt() {
 
             <motion.section variants={sectionVariants}>
               <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] flex items-center gap-2`}>
-                <span className="text-xl opacity-50">&lt;</span>
                 Technical Skills
-                <span className="text-xl opacity-50">/&gt;</span>
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Object.entries(skillSections).map(([key, section]) => (

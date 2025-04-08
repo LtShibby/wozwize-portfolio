@@ -26,7 +26,7 @@ function Games() {
       className="min-h-[calc(100vh-5rem)] p-8"
     >
       <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-        &lt;Games /&gt;
+        Games
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {items.map((item, index) => (
