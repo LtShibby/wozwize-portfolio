@@ -2,40 +2,19 @@ import { useParams, Navigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import PageTransition from '../components/PageTransition';
 import BlogPost from '../components/BlogPost';
-
-// This would typically come from an API or CMS
-const blogPosts = {
-  'building-scalable-ai-solutions': {
-    title: "Building Scalable AI Solutions with RAG",
-    subtitle: "A comprehensive guide to implementing Retrieval Augmented Generation",
-    excerpt: "Learn how to implement Retrieval Augmented Generation for enterprise applications.",
-    date: "2024-03-15",
-    category: "ai",
-    tags: ["AI", "RAG", "LLMs", "Enterprise"],
-    image: "/blog/rag-systems.jpg",
-    content: (
-      <>
-        <p>
-          Retrieval Augmented Generation (RAG) is revolutionizing how we build AI applications. 
-          In this comprehensive guide, we'll explore how to implement RAG systems that scale.
-        </p>
-        <h2>Understanding RAG Architecture</h2>
-        <p>
-          RAG combines the power of large language models with custom knowledge bases, 
-          enabling more accurate and contextual responses.
-        </p>
-        {/* Add more content sections */}
-      </>
-    )
-  },
-  // Add more blog posts...
-};
+import { useBlog } from '../components/BlogProvider';
+import { useEffect } from 'react';
 
 function BlogPostPage() {
   const { theme } = useTheme();
   const { slug } = useParams();
-  
-  const post = blogPosts[slug];
+  const { posts } = useBlog();
+
+  const post = posts.find(p => p.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -52,4 +31,4 @@ function BlogPostPage() {
   );
 }
 
-export default BlogPostPage; 
+export default BlogPostPage;

@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/layout/Navigation';
 import { ThemeProvider } from './context/ThemeContext';
-import ThemeSwitcher from './components/ThemeSwitcher';
 import { useTheme } from './context/ThemeContext';
+import { BlogProvider } from './components/BlogProvider';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
@@ -73,7 +73,6 @@ function AppContent() {
         </AnimatePresence>
       </main>
       <Footer />
-      {/* <ThemeSwitcher /> */}
     </div>
   );
 }
@@ -81,10 +80,12 @@ function AppContent() {
 function App() {
   return (
     <ThemeProvider>
+      <BlogProvider>
       <BrowserRouter>
         <ThemeIcon />
         <AppContent />
       </BrowserRouter>
+      </BlogProvider>
     </ThemeProvider>
   );
 }

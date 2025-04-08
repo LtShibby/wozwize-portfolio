@@ -41,9 +41,12 @@ function BlogPost({ post }) {
       )}
 
       {/* Content */}
-      <div className={`${theme.text} prose prose-lg max-w-none`}>
+      <div
+         className="prose prose-invert prose-lg max-w-none text-white"
+      >
         {post.content}
       </div>
+
 
       {/* Tags */}
       {post.tags && (
@@ -62,7 +65,10 @@ function BlogPost({ post }) {
       {/* Author Info */}
       <div className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+        <div
+          className="w-16 h-16 rounded-full bg-cover bg-center"
+          style={{ backgroundImage: 'url(/images/matt-headshot.jpg)' }}
+        />
           <div>
             <h3 className={`${theme.text} font-bold`}>Matt Wozniak</h3>
             <p className={`${theme.text} opacity-75`}>
