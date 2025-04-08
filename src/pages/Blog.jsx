@@ -53,17 +53,6 @@ function Blog() {
           </section>
 
           <section>
-
-          <div className="prose prose-invert text-white">
-            <h1>This is a heading</h1>
-            <p>This is a paragraph with <a href="#">a link</a>.</p>
-            <ul><li>List item one</li><li>List item two</li></ul>
-            <blockquote>This is a quote.</blockquote>
-          </div>
-
-          </section>
-
-          <section>
             {filteredPosts.length === 0 ? (
               <p className={`${theme.text} text-center mt-12`}>No posts found.</p>
             ) : (
