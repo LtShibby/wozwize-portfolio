@@ -54,7 +54,7 @@ function AboutUs() {
 
           {/* Core Values */}
           <section>
-            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>Our Core Values</h3>
+            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] text-center`}>Our Core Values</h3>
             <div className="grid md:grid-cols-4 gap-6">
               {coreValues.map((value, index) => {
                 const [flipped, setFlipped] = React.useState(false);
@@ -89,7 +89,7 @@ function AboutUs() {
 
           {/* Vision & Mission */}
           <section>
-            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>Our Vision</h3>
+            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] text-center`}>Our Vision</h3>
             <div className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
               <p className={`${theme.text} text-lg leading-relaxed`}>
                 We envision a future where technology serves humanity with transparency and purpose. 
@@ -101,7 +101,7 @@ function AboutUs() {
 
           {/* Meet the Founder */}
           <section>
-            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>Leadership</h3>
+            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] text-center`}>Leadership</h3>
 
             <div className={`${theme.nav} p-6 rounded-lg shadow-lg mb-6`}>
               <div className="flex flex-col md:flex-row items-center gap-6">
