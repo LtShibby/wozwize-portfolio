@@ -13,7 +13,7 @@ function AboutCory() {
           {/* Hero */}
           <section>
             <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-              About Cory
+              About Cory Dennington
             </h2>
             <div className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
               <div className="flex flex-col md:flex-row items-center gap-6">
