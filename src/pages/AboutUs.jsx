@@ -81,12 +81,12 @@ function AboutUs() {
                 <div className="w-32 h-32 rounded-full overflow-hidden">
                   <img 
                     src="/images/matt-headshot.jpg" 
-                    alt="Matt Wozniak - Founder of WozWize"
+                    alt="Matthew Wozniak - Founder of WozWize"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
-                  <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matt Wozniak</h4>
+                  <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matthew Wozniak</h4>
                   <p className={`${theme.text} opacity-75 mb-4`}>Director of Digital Solutions at WozWize</p>
                   <p className={`${theme.text} mb-4`}>
                     With over a decade of experience in software development and AI, 

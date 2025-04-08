@@ -70,7 +70,7 @@ function BlogPost({ post }) {
           style={{ backgroundImage: 'url(/images/matt-headshot.jpg)' }}
         />
           <div>
-            <h3 className={`${theme.text} font-bold`}>Matt Wozniak</h3>
+            <h3 className={`${theme.text} font-bold`}>Matthew Wozniak</h3>
             <p className={`${theme.text} opacity-75`}>
               Director of Digital Solutions at WozWize, AI Developer & Tech Consultant
             </p>

@@ -252,7 +252,7 @@ function AboutMatt() {
 
         <div className="relative">
           <h2 className={`${theme.text} text-3xl md:text-4xl font-bold mb-8 text-center font-['Fira_Code']`}>
-            About Matt 
+            About Matthew 
           </h2>
 
           <div className="max-w-4xl mx-auto space-y-12">
@@ -262,14 +262,14 @@ function AboutMatt() {
                   <div className="w-32 h-32 rounded-full overflow-hidden">
                     <img 
                       src="/images/matt-headshot.jpg" 
-                      alt="Matt Wozniak - Director of Digital Solutions at WozWize"
+                      alt="Matthew Wozniak - Director of Digital Solutions at WozWize"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 md:max-w-[75%]">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matt Wozniak</h4>
+                        <h4 className={`${theme.text} text-xl font-bold mb-2`}>Matthew Wozniak</h4>
                         <p className={`${theme.text} opacity-75 mb-4`}>Director of Digital Solutions at WozWize</p>
                       </div>
                       <Link
