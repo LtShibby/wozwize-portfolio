@@ -53,39 +53,39 @@ function AboutUs() {
           </section>
 
           {/* Core Values */}
-<section>
-  <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>Our Core Values</h3>
-  <div className="grid md:grid-cols-4 gap-6">
-    {coreValues.map((value, index) => {
-      const [flipped, setFlipped] = React.useState(false);
+          <section>
+            <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code']`}>Our Core Values</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              {coreValues.map((value, index) => {
+                const [flipped, setFlipped] = React.useState(false);
 
-      return (
-        <motion.div
-          key={index}
-          whileTap={{ scale: 0.97 }}
-          className="[perspective:1000px] cursor-pointer"
-          onClick={() => setFlipped(!flipped)}
-        >
-          <div
-            className={`relative h-48 w-full [transform-style:preserve-3d] transition-transform duration-500 ${flipped ? '[transform:rotateY(180deg)]' : ''}`}
-          >
-            {/* Front Side */}
-            <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold bg-gray-800 text-white rounded-lg [backface-visibility:hidden]">
-              {value.letter}
-            </div>
+                return (
+                  <motion.div
+                    key={index}
+                    whileTap={{ scale: 0.97 }}
+                    className="[perspective:1000px] cursor-pointer"
+                    onClick={() => setFlipped(!flipped)}
+                  >
+                    <div
+                      className={`relative h-48 w-full [transform-style:preserve-3d] transition-transform duration-500 ${flipped ? '[transform:rotateY(180deg)]' : ''}`}
+                    >
+                      {/* Front Side */}
+                      <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold bg-gray-800 text-white rounded-lg [backface-visibility:hidden]">
+                        {value.letter}
+                      </div>
 
-            {/* Back Side */}
-            <div className="absolute inset-0 p-4 bg-white rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
-              <div className="text-3xl mb-2">{value.icon}</div>
-              <h4 className="text-xl font-bold mb-1">{value.title}</h4>
-              <p className="text-sm opacity-75">{value.description}</p>
+                      {/* Back Side */}
+                      <div className="absolute inset-0 p-4 bg-white rounded-lg shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden] text-center">
+                        <div className="text-3xl mb-2">{value.icon}</div>
+                        <h4 className="text-xl font-bold mb-1">{value.title}</h4>
+                        <p className="text-sm opacity-75">{value.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
-          </div>
-        </motion.div>
-      );
-    })}
-  </div>
-</section>
+          </section>
 
           {/* Vision & Mission */}
           <section>
