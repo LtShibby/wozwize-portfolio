@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 function ThemeIcon() {
   const { currentTheme } = useTheme();

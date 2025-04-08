@@ -1,5 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../components/layout/PageTransition.jsx';
 import { FaGithub, FaLinkedin, FaCheckCircle } from 'react-icons/fa';
 import InteractiveSkills from '../components/InteractiveSkills';
 

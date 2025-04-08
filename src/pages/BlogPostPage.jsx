@@ -1,8 +1,8 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
-import BlogPost from '../components/BlogPost';
-import { useBlog } from '../components/BlogProvider';
+import PageTransition from '../components/layout/PageTransition.jsx';
+import BlogPost from '../components/blog/BlogPost.jsx';
+import { useBlog } from '../components/blog/BlogProvider.jsx';
 import { useEffect } from 'react';
 
 function BlogPostPage() {

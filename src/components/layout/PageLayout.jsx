@@ -1,6 +1,6 @@
 import { useTheme } from '../../context/ThemeContext';
-import PageTransition from '../PageTransition';
-import Breadcrumb from '../Breadcrumb';
+import PageTransition from './PageTransition.jsx';
+import Breadcrumb from '../marketing/Breadcrumb.jsx';
 import { motion } from 'framer-motion';
 
 function PageLayout({ children, title, subtitle, showBreadcrumb = true }) {

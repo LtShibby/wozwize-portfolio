@@ -1,4 +1,4 @@
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext.jsx';
 
 function ThemeSwitcher() {
   const { theme, setTheme, currentTheme } = useTheme();

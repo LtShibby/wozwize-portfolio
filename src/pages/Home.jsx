@@ -1,8 +1,8 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
-import HeroSection from '../components/HeroSection';
-import FeaturedProject from '../components/FeaturedProject';
-import ServiceCard from '../components/ServiceCard';
+import PageTransition from '../components/layout/PageTransition.jsx';
+import HeroSection from '../components/marketing/HeroSection.jsx';
+import FeaturedProject from '../components/marketing/FeaturedProject.jsx';
+import ServiceCard from '../components/marketing/ServiceCard.jsx';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';

@@ -1,8 +1,8 @@
 // ✅ Blog.jsx
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
-import BlogCard from '../components/BlogCard';
-import { useBlog } from '../components/BlogProvider';
+import PageTransition from '../components/layout/PageTransition.jsx';
+import BlogCard from '../components/blog/BlogCard.jsx';
+import { useBlog } from '../components/blog/BlogProvider.jsx';
 import { useState } from 'react';
 
 function Blog() {
