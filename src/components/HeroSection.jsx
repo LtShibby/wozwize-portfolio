@@ -170,9 +170,9 @@ function HeroSection() {
               </section>
 
               <footer className="text-center mt-20">
-                <p className={`${theme.text} border opacity-75 text-sm`}>Ready to get started?</p>
+                <p className={`${theme.text} opacity-75 text-sm`}>Ready to get started?</p>
                 <Link
-                  to="/questionnaire/custom-website"
+                  to="/contact"
                   className={`${theme.buttonAlt} inline-block mt-4 px-6 py-3 font-semibold rounded-full hover:opacity-90 transition`}
                 >
                   Let's Build Something →
