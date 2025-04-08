@@ -115,7 +115,7 @@ function AboutUs() {
                   <h4 className={`${theme.text} text-xl font-bold mb-2`}>Cory</h4>
                   <p className={`${theme.text} opacity-75 mb-4`}>Customer Success Architect at WozWize</p>
                   <p className={`${theme.text} mb-4`}>
-                    Cory brings over a decade of experience in program management, blowing dudes, and operations, helping clients scale with clarity, precision, and grit.
+                    Cory brings over a decade of experience in program management and operations, helping clients scale with clarity, precision, and grit.
                   </p>
                   <Link 
                     to="/about-cory" 
