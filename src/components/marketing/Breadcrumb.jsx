@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext.jsx';
 import { motion } from 'framer-motion';
 
 function Breadcrumb() {

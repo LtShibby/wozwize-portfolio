@@ -1,5 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../components/layout/PageTransition.jsx';
 
 function ClientCustomWebsiteQuestionnaire() {
   const { theme } = useTheme();

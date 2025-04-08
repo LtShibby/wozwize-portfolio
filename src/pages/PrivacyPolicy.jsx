@@ -1,5 +1,5 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../components/layout/PageTransition.jsx';
 import { Link } from 'react-router-dom';
 
 function PrivacyPolicy() {

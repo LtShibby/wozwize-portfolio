@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
-import SubstackEmbed from '../components/SubstackEmbed';
-import SubstackFeed from '../components/SubstackFeed';
-import PageTransition from '../components/PageTransition';
+import SubstackEmbed from '../components/embeds/SubstackEmbed.jsx';
+import SubstackFeed from '../components/embeds/SubstackFeed.jsx';
+import PageTransition from '../components/layout/PageTransition.jsx';
 
 export default function Newsletter() {
   const { theme } = useTheme();

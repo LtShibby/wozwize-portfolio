@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext.jsx';
 import { Link } from 'react-router-dom';
 
 function ServiceCard({ service }) {

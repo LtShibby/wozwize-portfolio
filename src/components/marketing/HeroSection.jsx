@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext.jsx';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import MissionCarousel from './MissionCarousel';
+import MissionCarousel from './MissionCarousel.jsx';
 
 function HeroSection() {
   const { theme } = useTheme();

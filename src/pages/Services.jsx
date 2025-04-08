@@ -1,6 +1,6 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
-import ServiceCard from '../components/ServiceCard';
+import PageTransition from '../components/layout/PageTransition.jsx';
+import ServiceCard from '../components/marketing/ServiceCard.jsx';
 import { Link } from 'react-router-dom';
 
 function Services() {

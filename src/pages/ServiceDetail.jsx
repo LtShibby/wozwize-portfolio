@@ -1,6 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
+import PageTransition from '../components/layout/PageTransition.jsx';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import PageLayout from '../components/layout/PageLayout';

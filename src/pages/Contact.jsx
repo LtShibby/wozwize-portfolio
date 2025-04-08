@@ -1,6 +1,6 @@
 import { useTheme } from '../context/ThemeContext';
-import PageTransition from '../components/PageTransition';
-import ContactForm from '../components/ContactForm';
+import PageTransition from '../components/layout/PageTransition.jsx';
+import ContactForm from '../components/forms/ContactForm.jsx';
 import { motion } from 'framer-motion';
 
 function Contact() {
