@@ -28,7 +28,6 @@ import ClientCustomWebsiteQuestionnaire from './pages/ClientCustomWebsiteQuestio
 import MattProfile from './pages/MattProfile';
 import Chat from './pages/Chat';
 import ScrollToTop from './ScrollToTop';
-import AboutCory from './pages/AboutCory.jsx';
 function AppContent() {
   const { theme } = useTheme();
   const location = useLocation();
@@ -57,16 +56,6 @@ function AppContent() {
               <AnimatePresence mode="wait">
                 <PageTransition variant="fade" key={location.pathname}>
                   <AboutMatt />
-                </PageTransition>
-              </AnimatePresence>
-            }
-          />
-          <Route
-            path="/about-cory"
-            element={
-              <AnimatePresence mode="wait">
-                <PageTransition variant="fade" key={location.pathname}>
-                  <AboutCory />
                 </PageTransition>
               </AnimatePresence>
             }

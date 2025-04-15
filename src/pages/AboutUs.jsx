@@ -129,31 +129,6 @@ function AboutUs() {
               </div>
             </div>
 
-            <div className={`${theme.nav} p-6 rounded-lg shadow-lg`}>
-              <div className="flex flex-col md:flex-row items-center gap-6">
-                <div className="w-32 h-32 rounded-full overflow-hidden">
-                  <img 
-                    src="/images/cory-headshot.jpg" 
-                    alt="Cory - Strategic Advisor at WozWize"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div>
-                  <h4 className={`${theme.text} text-xl font-bold mb-2`}>Cory Dennington</h4>
-                  <p className={`${theme.text} opacity-75 mb-4`}>Customer Success Architect at WozWize</p>
-                  <p className={`${theme.text} mb-4`}>
-                    Cory brings over a decade of experience in program management and operations, helping clients scale with clarity, precision, and grit.
-                  </p>
-                  <Link 
-                    to="/about-cory" 
-                    className={`${theme.button} px-4 py-2 rounded inline-block hover:opacity-90 transition-all`}
-                  >
-                    Learn More About Cory
-                  </Link>
-                </div>
-              </div>
-            </div>
-
           </section>
         </div>
       </div>
