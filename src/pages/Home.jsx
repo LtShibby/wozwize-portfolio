@@ -22,6 +22,49 @@ function Home() {
 
   const featuredProjects = [
     {
+      title: "Planit-Poker",
+      description: "Planit-Poker is a dead-simple, no-login agile estimation tool. Teams can spin up an instant room, invite teammates with a shareable link, and point stories in real-time. No accounts, no history, and no trackers — rooms expire automatically after inactivity.",
+      technologies: [
+        "Next.js",
+        "React",
+        "App Router",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Node.js",
+        "Express",
+        "Socket.IO",
+        "TypeScript",
+        "Railway.app",
+        "Vercel Fonts"
+      ],
+      image: "/images/planit-poker.png",
+      link: "https://planit-poker.com",
+      status: "Live",
+      launchDate: "2025-08-18",
+      category: "Agile Tools",
+      isFeatured: true
+    },
+    {
+      title: "StageWize",
+      description: "StageWize is a visual lead management CRM for solo operators, startups, and small sales teams. Manage your pipeline with an intuitive Kanban board (New → Contacted → Follow-Up → Won/Lost), smooth drag-and-drop, and instant updates. Try it free in demo mode — no logins, no friction.",
+      technologies: [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand",
+        "@dnd-kit",
+        "React Hot Toast",
+        "Lucide Icons",
+        "Responsive Design"
+      ],
+      image: "/images/stagewize-cropped.png",
+      link: "https://stagewize.com",
+      status: "Live",
+      launchDate: "2024-06-14",
+      category: "Sales & CRM Tools",
+      isFeatured: true
+    },
+    {
       title: "Media Unmask",
       description: "AI-powered media analysis platform providing transparency and insights into news and social media content.",
       technologies: [

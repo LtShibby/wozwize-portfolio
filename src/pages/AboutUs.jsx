@@ -55,6 +55,7 @@ function AboutUs() {
           {/* Core Values */}
           <section>
             <h3 className={`${theme.text} text-2xl font-bold mb-6 font-['Fira_Code'] text-center`}>Our Core Values</h3>
+            
             <div className="grid md:grid-cols-4 gap-6">
               {coreValues.map((value, index) => {
                 const [flipped, setFlipped] = React.useState(false);
@@ -63,9 +64,17 @@ function AboutUs() {
                   <motion.div
                     key={index}
                     whileTap={{ scale: 0.97 }}
-                    className="[perspective:1000px] cursor-pointer"
+                    className="[perspective:1000px] cursor-pointer relative"
                     onClick={() => setFlipped(!flipped)}
                   >
+                    {/* Click me! indicator */}
+                    <div className="absolute -top-2 -right-2 z-10">
+                      <span className="text-xs font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent animate-pulse">
+                        <span className="md:hidden">Tap me!</span>
+                        <span className="hidden md:inline">click me!</span>
+                      </span>
+                    </div>
+                    
                     <div
                       className={`relative h-48 w-full [transform-style:preserve-3d] transition-transform duration-500 ${flipped ? '[transform:rotateY(180deg)]' : ''}`}
                     >
