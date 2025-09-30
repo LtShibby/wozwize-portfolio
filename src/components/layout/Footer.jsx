@@ -25,24 +25,15 @@ function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {/* Brand block */}
           <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-3 group justify-center sm:justify-start"
-              aria-label="WozWize home"
-            >
-              {/* Logo container (rounded black badge) */}
-              <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-black/90 ring-1 ring-white/10 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-                <img
-                  src="/images/wozwize-logo-3.jpg"
-                  alt="WozWize Logo"
-                  className="w-9 h-9 sm:w-11 sm:h-11 object-contain opacity-95 drop-shadow-[0_0_4px_#00AEEF]"
-                />
-              </div>
-
-              {/* Brand name */}
-              <span className="font-extrabold tracking-tight leading-none">
-                <span className="text-[1.75rem] sm:text-[2rem] text-[#00AEEF]">Woz</span>
-                <span className="text-[1.75rem] sm:text-[2rem] text-[#FFD700]">Wize</span>
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="/images/wozwize-logo-3.jpg"
+                alt="WozWize Logo"
+                className="h-20 w-auto drop-shadow-md"
+              />
+              <span className="text-lg sm:text-xl font-bold tracking-tight">
+                <span className="text-[#00AEEF]">Woz</span>
+                <span className="text-[#FFD700]">Wize</span>
               </span>
             </Link>
             <p className="text-xs sm:text-sm opacity-80 leading-relaxed max-w-xs mx-auto sm:mx-0">
