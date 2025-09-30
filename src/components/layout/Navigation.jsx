@@ -60,7 +60,7 @@ function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/images/wozwize-logo-2.jpg" 
+              src="/images/wozwize-logo-3.jpg"
               alt="WozWize Logo" 
               className="h-12 w-auto"
             />

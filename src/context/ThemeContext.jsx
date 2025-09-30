@@ -29,7 +29,7 @@ const themes = {
   },
   wozwize: {
     primary: 'from-blue-400 via-cyan-500 to-yellow-300',
-    background: 'bg-black',
+    background: 'bg-wozwize-chips',
     text: 'text-blue-100',
     nav: 'bg-black/70 backdrop-blur-md shadow-lg',
     button: 'bg-blue-500 hover:bg-blue-600 text-white',
@@ -68,4 +68,4 @@ export function useTheme() {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
-} 
+}

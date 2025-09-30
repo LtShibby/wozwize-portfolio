@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  min-height: 100vh;
+  height: 100%;
+}
+
+#root {
+  background: transparent;
+}
+
+/* All-black base with glowing circuit paths - Fixed version */
+.bg-wozwize-chips {
+  position: relative !important;
+  background: #000 !important; /* true black */
+  background-color: #000 !important;
+  overflow: hidden;
+}
+
+/* Tiled SVG circuit layer - Fixed version */
+.bg-wozwize-chips::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGRlZnM+CiAgICA8ZmlsdGVyIGlkPSJnbG93IiB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjIuNSIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZU1lcmdlPgogICAgICAgIDxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPgogICAgICAgIDxmZU1lcmdlTm9kZSBpbj0iYmx1ciIvPgogICAgICA8L2ZlTWVyZ2U+CiAgICA8L2ZpbHRlcj4KICAgIDxzdHlsZT4uYmwge3N0cm9rZS13aWR0aDoxLjhweDsgZmlsbDpub25lOyBvcGFjaXR5OjAuOTt9IC55e2ZpbGw6bm9uZTtzdHJva2Utd2lkdGg6Mi41cHg7fTwvc3R5bGU+CiAgPC9kZWZzPgogIDxnIGZpbHRlcj0idXJsKCNnbG93KSI+CiAgICA8cGF0aCBjbGFzcz0iYmwieiBzdHJva2U9IiMwMEI1Q0MiIGQ9Ik0gNDAgNTAgTCAxNDAgNTAgTCAxNDAgMTUwIEwgMjQwIDE1MCBMIDI0MCAyNTAiLz4KICAgIDxwYXRoIGNsYXNzPSJibCIgc3Ryb2tlPSIjMDBCNUNDIiBkPSJNIDQwMCA0MCBMIDQwMCAxNDAgTCA1MDAgMTQwIEwgNTAwIDI0MCBMIDYwMCAyNDAiLz4KICAgIDxwYXRoIGNsYXNzPSJibCIgc3Ryb2tlPSIjMDBCNUNDIiBkPSJNIDgwIDQwMCBMIDE4MCA0MDAgTCAxODAgNTAwIEwgMjgwIDUwMCIvPgogICAgPHBhdGggY2xhc3M9ImJsIiBzdHJva2U9IiNGRkQzMDAiIGQ9Ik0gMzIwIDgwIEwgMzIwIDE4MCBMIDQyMCAxODAgTCA0MjAgMjgwIi8+CiAgICA8cGF0aCBjbGFzcz0iYmwic3Ryb2tlPSIjRkZEMzAwIiBkPSJNIDQ2MCAzNDAgTCA1NjAgMzQwIEwgNTYwIDQ0MCBMIDY2MCA0NDAiLz4KICAgIDxjaXJjbGUgY2xhc3M9InkiIHN0cm9rZT0iIzAwQjVDQyIgY3g9IjI0MCIgY3k9IjI1MCIgcj0iNSIvPgogICAgPGNpcmNsZSBjbGFzcz0ieSIgc3Ryb2tlPSIjRkZEMzAwIiBjeD0iNTYwIiBjeT0iNDQwIiByPSI1Ii8+CiAgPC9nPgogIDxnIG9wYWNpdHk9IjAuNDUiPgogICAgPHBhdGggY2xhc3M9ImJsIiBzdHJva2U9IiMwMEI1Q0MiIGQ9Ik0gMTAgMzAwIEwgMTAwIDMwMCBMIDEwMCAzNTAiLz4KICAgIDxwYXRoIGNsYXNzPSJibCIgc3Ryb2tlPSIjRkZEMzAwIiBkPSJNIDQwMCA1NTAgTCA0NTAgNTUwIEwgNDUwIDU4MCIvPgogIDwvZz4KPC9zdmc+") !important;
+  background-size: 800px 600px !important;
+  background-repeat: repeat !important;
+  mix-blend-mode: screen !important;
+  opacity: 0.85 !important;
+  animation: chips-glow 6s ease-in-out infinite !important;
+  z-index: 1 !important;
+}
+
+/* Subtle vignette + depth - Fixed version */
+.bg-wozwize-chips::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background:
+    radial-gradient(1200px 800px at 70% 30%, rgba(0,181,204,0.08), transparent 60%),
+    radial-gradient(900px 700px at 20% 80%, rgba(255,211,0,0.06), transparent 55%),
+    radial-gradient(closest-side, transparent 60%, rgba(0,0,0,0.75) 100%) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+/* Ensure content is above the background layers */
+.bg-wozwize-chips > * {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Gentle shimmer animation */
+@keyframes chips-glow {
+  0%, 100% { opacity: 0.82 !important; }
+  50%      { opacity: 0.92 !important; }
+}

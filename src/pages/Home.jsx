@@ -22,6 +22,27 @@ function Home() {
 
   const featuredProjects = [
     {
+      title: "WizeLibrary",
+      description: "WizeLibrary transforms vague learning goals into curated reading journeys. Enter any topic — from 'stoicism' to 'quantum computing' — and get a 3-stage Foundation → Bridge → Advanced book path with rationales explaining how each title connects. Designed for autodidacts, scholars, and lifelong learners who want structured wisdom without the academic gatekeeping.",
+      technologies: [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Framer Motion",
+        "Supabase",
+        "Cohere AI",
+        "Edge Functions",
+        "Vercel"
+      ],
+      image: "/images/wizeLibraryHeroBanner.png",
+      link: "https://wizelibrary.com",
+      status: "Live",
+      launchDate: "2025-10-01",
+      category: "AI & Education",
+      isFeatured: true
+    },
+    {
       title: "Planit-Poker",
       description: "Planit-Poker is a dead-simple, no-login agile estimation tool. Teams can spin up an instant room, invite teammates with a shareable link, and point stories in real-time. No accounts, no history, and no trackers — rooms expire automatically after inactivity.",
       technologies: [

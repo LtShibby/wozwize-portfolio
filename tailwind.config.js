@@ -4,6 +4,9 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    'bg-wozwize-chips'
+  ],
   theme: {
     extend: {
       animation: {
@@ -48,4 +51,4 @@ export default {
   plugins: [
     require('@tailwindcss/typography'),
   ],
-} 
+}

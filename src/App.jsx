@@ -33,7 +33,21 @@ function AppContent() {
   const location = useLocation();
   
   return (
-    <div className={`min-h-screen w-full ${theme.background} overflow-x-hidden flex flex-col`}>
+    <div
+      className="min-h-screen w-full overflow-x-hidden flex flex-col"
+      style={{
+        backgroundColor: '#000000',
+        backgroundImage: `
+          linear-gradient(90deg, transparent 99.5%, rgba(0, 181, 204, 0.15) 99.7%, transparent 100%),
+          linear-gradient(0deg, transparent 99.5%, rgba(255, 211, 0, 0.12) 99.7%, transparent 100%),
+          radial-gradient(circle at 25% 25%, rgba(0, 181, 204, 0.2) 0.5px, transparent 1px),
+          radial-gradient(circle at 75% 75%, rgba(255, 211, 0, 0.15) 0.5px, transparent 1px)
+        `,
+        backgroundSize: '200px 200px, 250px 250px, 150px 150px, 200px 200px',
+        backgroundPosition: '0 0, 0 0, 0 0, 100px 100px',
+      }}
+    >
+
       <Navigation />
       <main className="flex-grow">
       <ScrollToTop />
