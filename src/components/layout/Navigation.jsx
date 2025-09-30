@@ -57,14 +57,18 @@ function Navigation() {
     <nav className={`${theme.nav} py-4 fixed top-0 left-0 right-0 z-50`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/images/wozwize-logo-3.jpg"
-              alt="WozWize Logo" 
-              className="h-24 w-auto"
-            />
-          </Link>
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src="/images/wozwize-logo-3.jpg"
+                alt="WozWize Logo"
+                className="h-20 w-auto drop-shadow-md"
+              />
+              <span className="text-lg sm:text-xl font-bold tracking-tight">
+                <span className="text-[#00AEEF]">Woz</span>
+                <span className="text-[#FFD700]">Wize</span>
+              </span>
+            </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">

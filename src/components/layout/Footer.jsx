@@ -20,50 +20,50 @@ function Footer() {
       {/* soft backdrop */}
       <div className="absolute inset-0 pointer-events-none [mask-image:linear-gradient(to_top,transparent,black_20%,black_80%,transparent)] bg-[radial-gradient(40rem_20rem_at_100%_-4rem,rgba(99,102,241,0.08),transparent),radial-gradient(32rem_18rem_at_0%_100%,rgba(168,85,247,0.08),transparent)]" />
 
-      <div className="relative container mx-auto px-4 py-10 sm:py-14">
-        {/* top row: brand + link groups */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="relative container mx-auto px-4 py-6 sm:py-8 lg:py-10">
+        {/* Mobile-optimized grid: 1 col mobile, 2 col tablet, 3 col desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {/* Brand block */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4 text-center sm:text-left">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 group"
+              className="inline-flex items-center gap-3 group justify-center sm:justify-start"
               aria-label="WozWize home"
             >
-              <div className="h-12 w-12 rounded-xl bg-white/5 ring-1 ring-white/10 grid place-items-center group-hover:scale-105 transition-transform">
-                {/* WozWize logo */}
+              {/* Logo container (rounded black badge) */}
+              <div className="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-black/90 ring-1 ring-white/10 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
                 <img
                   src="/images/wozwize-logo-3.jpg"
                   alt="WozWize Logo"
-                  width="100"
-                  height="100"
-                  className="opacity-90"
+                  className="w-9 h-9 sm:w-11 sm:h-11 object-contain opacity-95 drop-shadow-[0_0_4px_#00AEEF]"
                 />
               </div>
-              <span className={`text-xl font-bold tracking-tight ${theme.accent}`}>
-                WozWize
+
+              {/* Brand name */}
+              <span className="font-extrabold tracking-tight leading-none">
+                <span className="text-[1.75rem] sm:text-[2rem] text-[#00AEEF]">Woz</span>
+                <span className="text-[1.75rem] sm:text-[2rem] text-[#FFD700]">Wize</span>
               </span>
             </Link>
-
-            <p className="text-sm opacity-80 leading-relaxed">
+            <p className="text-xs sm:text-sm opacity-80 leading-relaxed max-w-xs mx-auto sm:mx-0">
               Building pragmatic products for real people. From quick MVPs to
               resilient platforms—craft, clarity, and speed.
             </p>
 
-            {/* socials */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* socials - horizontal on mobile */}
+            <div className="flex items-center justify-center sm:justify-start gap-3 pt-2">
               <a
                 href="https://twitter.com/WozWize"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter / X"
-                className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
+                className="group inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
               >
                 <svg
                   viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="opacity-90 group-hover:opacity-100"
+                  width="16"
+                  height="16"
+                  className="opacity-90 group-hover:opacity-100 sm:w-[18px] sm:h-[18px]"
                   aria-hidden="true"
                 >
                   <path
@@ -77,13 +77,13 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="group inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
+                className="group inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
               >
                 <svg
                   viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  className="opacity-90 group-hover:opacity-100"
+                  width="16"
+                  height="16"
+                  className="opacity-90 group-hover:opacity-100 sm:w-[18px] sm:h-[18px]"
                   aria-hidden="true"
                 >
                   <path
@@ -95,40 +95,40 @@ function Footer() {
             </div>
           </div>
 
-          {/* Links group A */}
-          <div className="grid grid-cols-2 gap-6 max-w-md">
+          {/* Links groups - stacked on mobile, side by side on larger screens */}
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 sm:col-span-2 lg:col-span-1 lg:max-w-md text-center">
             <div>
-              <h3 className="text-sm font-semibold tracking-wide uppercase opacity-70 mb-3">
+              <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase opacity-70 mb-2 sm:mb-3">
                 Explore
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 <li>
-                  <Link to="/" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/projects" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/projects" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     Projects
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/services" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/blog" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     Blog
                   </Link>
                 </li>
                 <li>
-                  <Link to="/about-us" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/about-us" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className={`${linkBase} ${linkTone}`}>
+                  <Link to="/contact" className={`${linkBase} ${linkTone} text-xs sm:text-sm`}>
                     Contact
                   </Link>
                 </li>
@@ -137,14 +137,14 @@ function Footer() {
 
             {/* Links group B */}
             <div>
-              <h3 className="text-sm font-semibold tracking-wide uppercase opacity-70 mb-3">
+              <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase opacity-70 mb-2 sm:mb-3">
                 Legal & Docs
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5 sm:space-y-2">
                 <li>
                   <Link
                     to="/privacy-policy"
-                    className={`${linkBase} ${linkTone} underline underline-offset-4`}
+                    className={`${linkBase} ${linkTone} underline underline-offset-4 text-xs sm:text-sm`}
                   >
                     Privacy Policy
                   </Link>
@@ -152,7 +152,7 @@ function Footer() {
                 <li>
                   <Link
                     to="/terms-of-service"
-                    className={`${linkBase} ${linkTone} underline underline-offset-4`}
+                    className={`${linkBase} ${linkTone} underline underline-offset-4 text-xs sm:text-sm`}
                   >
                     Terms of Service
                   </Link>
@@ -161,45 +161,46 @@ function Footer() {
             </div>
           </div>
 
-          {/* Contact & Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold tracking-wide uppercase opacity-70 mb-3">
+          {/* Contact & Newsletter - full width on mobile */}
+          <div className="space-y-3 sm:space-y-4 sm:col-span-2 lg:col-span-1 text-center sm:text-left">
+            <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase opacity-70 mb-2 sm:mb-3">
               Get in Touch
             </h3>
-            <div className="space-y-3">
-              <p className="text-sm opacity-80">
+            <div className="space-y-2 sm:space-y-3">
+              <p className="text-xs sm:text-sm opacity-80">
                 Ready to build something amazing?
               </p>
               <Link
                 to="/contact"
-                className={`inline-flex items-center gap-2 text-sm ${theme.button} px-4 py-2 rounded-lg hover:opacity-90 transition-opacity`}
+                className={`inline-flex items-center gap-2 text-xs sm:text-sm ${theme.button} px-3 py-2 sm:px-4 rounded-lg hover:opacity-90 transition-opacity`}
               >
                 Start a Project
                 <svg
-                  width="16"
-                  height="16"
+                  width="14"
+                  height="14"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
+                  className="sm:w-4 sm:h-4"
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>
               </Link>
 
-              <div className="pt-2 space-y-2">
+              <div className="pt-1 sm:pt-2 space-y-1.5 sm:space-y-2">
                 <p className="text-xs opacity-70 uppercase tracking-wide font-semibold">
                   Stay Updated
                 </p>
                 <Link
                   to="/newsletter"
-                  className="block text-sm opacity-80 hover:opacity-100 transition-colors"
+                  className="block text-xs sm:text-sm opacity-80 hover:opacity-100 transition-colors"
                 >
                   Join our newsletter →
                 </Link>
                 <Link
                   to="/blog"
-                  className="block text-sm opacity-80 hover:opacity-100 transition-colors"
+                  className="block text-xs sm:text-sm opacity-80 hover:opacity-100 transition-colors"
                 >
                   Latest insights →
                 </Link>
@@ -209,11 +210,11 @@ function Footer() {
         </div>
 
         {/* separator */}
-        <div className="my-8 h-px w-full bg-current/10" />
+        <div className="my-4 sm:my-6 lg:my-8 h-px w-full bg-current/10" />
 
-        {/* bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-sm opacity-70">
+        {/* bottom bar - stacked on mobile */}
+        <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-between sm:gap-3 text-center sm:text-left">
+          <p className="text-xs sm:text-sm opacity-70">
             © {new Date().getFullYear()} WozWize. All rights reserved.
           </p>
           <p className="text-xs opacity-60">
