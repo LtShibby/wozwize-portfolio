@@ -62,7 +62,7 @@ function Navigation() {
             <img 
               src="/images/wozwize-logo-3.jpg"
               alt="WozWize Logo" 
-              className="h-12 w-auto"
+              className="h-24 w-auto"
             />
           </Link>
 
